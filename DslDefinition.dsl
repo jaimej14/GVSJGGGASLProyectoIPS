@@ -5,14 +5,6 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Ventana" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>TapizHasVentana.Ventana</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
             <DomainClassMoniker Name="EstadoDeFin" />
           </Index>
           <LinkCreationPaths>
@@ -41,6 +33,22 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>TapizHasItemsMenu.ItemsMenu</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="VentanaPrincipal" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizHasVentanaPrincipal.VentanaPrincipal</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="VentanaSecundaria" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizHasVentanaSecundaria.VentanaSecundaria</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -116,25 +124,9 @@
     <DomainClass Id="bc8172ea-453e-49e2-a64e-625c3a5dabd1" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin" Name="EstadoDeFin" DisplayName="Estado De Fin" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" />
   </Classes>
   <Relationships>
-    <DomainRelationship Id="7942a86a-9cb4-43a1-990a-fe8bac094238" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana" Name="TapizHasVentana" DisplayName="Tapiz Has Ventana" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="4c7c5bfc-ac19-4a89-81cb-333ea2be4672" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="Ventana" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana">
-          <RolePlayer>
-            <DomainClassMoniker Name="Tapiz" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="bec83715-cbb6-469c-9d12-8c03b62e25c5" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Tapiz" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz">
-          <RolePlayer>
-            <DomainClassMoniker Name="Ventana" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="c961b6f8-2b37-4adf-8f78-4b4c41b6a98c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB" Name="RelacionDeFinalizacionB" DisplayName="Relacion De Finalizacion B" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS">
       <Source>
-        <DomainRole Id="1525b98f-4817-40ad-8134-cbaf4a6c3a27" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.Boton" Name="Boton" DisplayName="Boton" PropertyName="EstadoDeFin" PropertyDisplayName="Estado De Fin">
+        <DomainRole Id="1525b98f-4817-40ad-8134-cbaf4a6c3a27" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.Boton" Name="Boton" DisplayName="Boton" PropertyName="EstadoDeFin" Multiplicity="ZeroOne" PropertyDisplayName="Estado De Fin">
           <RolePlayer>
             <DomainClassMoniker Name="Boton" />
           </RolePlayer>
@@ -166,7 +158,7 @@
     </DomainRelationship>
     <DomainRelationship Id="0bfa9053-d8aa-4af2-901c-b1a7a2ff2ce1" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM" Name="RelacionDeFinalizacionM" DisplayName="Relacion De Finalizacion M" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS">
       <Source>
-        <DomainRole Id="a6a58faa-ea4a-4a16-bb44-a2a6129dcc47" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="EstadoDeFin" PropertyDisplayName="Estado De Fin">
+        <DomainRole Id="a6a58faa-ea4a-4a16-bb44-a2a6129dcc47" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="EstadoDeFin" Multiplicity="ZeroOne" PropertyDisplayName="Estado De Fin">
           <RolePlayer>
             <DomainClassMoniker Name="ItemsMenu" />
           </RolePlayer>
@@ -182,7 +174,7 @@
     </DomainRelationship>
     <DomainRelationship Id="2f8935fa-3d7d-4faf-b0fd-89b67f9ccc1c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM" Name="RelacionDeAccionM" DisplayName="Relacion De Accion M" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS">
       <Source>
-        <DomainRole Id="1f13672e-4c85-40bb-9632-9063cc5c242e" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="Ventana" PropertyDisplayName="Ventana">
+        <DomainRole Id="1f13672e-4c85-40bb-9632-9063cc5c242e" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="Ventana" Multiplicity="ZeroOne" PropertyDisplayName="Ventana">
           <RolePlayer>
             <DomainClassMoniker Name="ItemsMenu" />
           </RolePlayer>
@@ -198,7 +190,7 @@
     </DomainRelationship>
     <DomainRelationship Id="a72be47f-5950-4883-a846-511aed259568" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB" Name="RelacionDeAccionB" DisplayName="Relacion De Accion B" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS">
       <Source>
-        <DomainRole Id="2d144648-f4f2-4372-a3f7-4f7438aae03a" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana1" PropertyDisplayName="Ventana1">
+        <DomainRole Id="2d144648-f4f2-4372-a3f7-4f7438aae03a" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana1" Multiplicity="ZeroOne" PropertyDisplayName="Ventana1">
           <RolePlayer>
             <DomainClassMoniker Name="Boton" />
           </RolePlayer>
@@ -269,7 +261,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8b2003a5-338d-4fd8-b776-3b0e7343a4b0" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="Menu" PropertyDisplayName="Menu">
+        <DomainRole Id="8b2003a5-338d-4fd8-b776-3b0e7343a4b0" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.ItemsMenu" Name="ItemsMenu" DisplayName="Items Menu" PropertyName="Menu" Multiplicity="ZeroOne" PropertyDisplayName="Menu">
           <RolePlayer>
             <DomainClassMoniker Name="ItemsMenu" />
           </RolePlayer>
@@ -285,7 +277,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="2f062d0b-065a-45ed-9176-efdce2664261" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana" PropertyDisplayName="Ventana">
+        <DomainRole Id="2f062d0b-065a-45ed-9176-efdce2664261" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana" Multiplicity="ZeroOne" PropertyDisplayName="Ventana">
           <RolePlayer>
             <DomainClassMoniker Name="Boton" />
           </RolePlayer>
@@ -301,9 +293,41 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="324e0bcb-2722-43fa-bdcc-d217f3b89879" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" PropertyDisplayName="Ventana">
+        <DomainRole Id="324e0bcb-2722-43fa-bdcc-d217f3b89879" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="ZeroOne" PropertyDisplayName="Ventana">
           <RolePlayer>
             <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="8351297d-883d-4c8b-a7b3-9040ccbcf913" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal" Name="TapizHasVentanaPrincipal" DisplayName="Tapiz Has Ventana Principal" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="ad5665d1-ceab-49f2-aa21-751cc830295a" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="VentanaPrincipal" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="Tapiz" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="011864bf-337b-4555-aca9-cf9cc1aa0d5c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.VentanaPrincipal" Name="VentanaPrincipal" DisplayName="Ventana Principal" PropertyName="Tapiz" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz">
+          <RolePlayer>
+            <DomainClassMoniker Name="VentanaPrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="78021714-10fd-45fb-9c05-9b699f4ce5f5" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundaria" Name="TapizHasVentanaSecundaria" DisplayName="Tapiz Has Ventana Secundaria" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="f79e0c1a-0219-4a04-aa98-90208f4f8f84" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundaria.Tapiz" Name="Tapiz" DisplayName="Tapiz" PropertyName="VentanaSecundaria" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana Secundaria">
+          <RolePlayer>
+            <DomainClassMoniker Name="Tapiz" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="5c10cf6e-63f8-455e-95e4-97f2e15e5d1c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundaria.VentanaSecundaria" Name="VentanaSecundaria" DisplayName="Ventana Secundaria" PropertyName="Tapiz" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz">
+          <RolePlayer>
+            <DomainClassMoniker Name="VentanaSecundaria" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -327,50 +351,47 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="fe7badbc-169d-410a-a76e-7dcb7793856e" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaPrincipal" Name="MetaforaVentanaPrincipal" DisplayName="Metafora Ventana Principal" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Ventana Principal" FillColor="128, 128, 255" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+    <GeometryShape Id="fe7badbc-169d-410a-a76e-7dcb7793856e" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaPrincipal" Name="MetaforaVentanaPrincipal" DisplayName="Metafora Ventana Principal" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Ventana Principal" FillColor="128, 128, 255" InitialWidth="2" InitialHeight="0.5" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="18" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="7a590071-c328-4df6-8a60-425da834a7d9" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria" Name="MetaforaVentanaSecundaria" DisplayName="Metafora Ventana Secundaria" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Ventana Secundaria" FillColor="192, 255, 255" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+    <GeometryShape Id="7a590071-c328-4df6-8a60-425da834a7d9" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria" Name="MetaforaVentanaSecundaria" DisplayName="Metafora Ventana Secundaria" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Ventana Secundaria" FillColor="192, 255, 255" InitialWidth="2" InitialHeight="0.5" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="18" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="a5f9a4c7-854d-4b64-899b-fff8b60ca1ad" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu" Name="MetaforaMenu" DisplayName="Metafora Menu" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Menu" FillColor="Silver" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="tituloDec" DisplayName="Titulo Dec" DefaultText="tituloDec" />
+    <GeometryShape Id="a5f9a4c7-854d-4b64-899b-fff8b60ca1ad" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu" Name="MetaforaMenu" DisplayName="Metafora Menu" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Menu" FillColor="Silver" InitialWidth="1" InitialHeight="0.5" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tituloDec" DisplayName="Titulo Dec" DefaultText="tituloDec" FontSize="12" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4ec74699-0872-4a56-abc6-6ef390181523" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemsMenu" Name="MetaforaItemsMenu" DisplayName="Metafora Items Menu" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Items Menu" FillColor="DarkGray" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="4ec74699-0872-4a56-abc6-6ef390181523" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemsMenu" Name="MetaforaItemsMenu" DisplayName="Metafora Items Menu" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Items Menu" FillColor="DarkGray" InitialWidth="0.75" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="tiuloDec" DisplayName="Tiulo Dec" DefaultText="tiuloDec" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="274b2dfb-dcd5-4024-81ae-974f5e02101c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Boton" FillColor="Plum" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="tituloDec" DisplayName="Titulo Dec" DefaultText="tituloDec" />
+    <GeometryShape Id="274b2dfb-dcd5-4024-81ae-974f5e02101c" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Boton" FillColor="Plum" InitialWidth="0.75" InitialHeight="0.75" FillGradientMode="None" Geometry="Circle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tituloDec" DisplayName="Titulo Dec" DefaultText="tituloDec" FontSize="15" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="ebdeca39-b839-4538-8532-00745420e5d1" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoDeFin" Name="MetaforaEstadoDeFin" DisplayName="Metafora Estado De Fin" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Estado De Fin" FillColor="Black" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="ebdeca39-b839-4538-8532-00745420e5d1" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoDeFin" Name="MetaforaEstadoDeFin" DisplayName="Metafora Estado De Fin" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora Estado De Fin" FillColor="Black" InitialWidth="0.5" InitialHeight="0.5" FillGradientMode="None" Geometry="Circle" />
   </Shapes>
   <Connectors>
-    <Connector Id="6a0d9478-cb89-4307-bb28-ec7ba0bf78f7" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT" Name="MetaforaVN_BT" DisplayName="Metafora VN_ BT" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora VN_ BT" />
-    <Connector Id="71344854-a4cd-4f5c-b3ea-5bb50768d922" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN" Name="MetaforaVN_MN" DisplayName="Metafora VN_ MN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora VN_ MN" />
-    <Connector Id="7575a0f6-3db8-4550-87b2-62ee6b5e1652" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF" Name="MetaforaBT_EF" DisplayName="Metafora BT_ EF" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora BT_ EF" />
-    <Connector Id="6a9217e9-f151-4e53-99db-9ae33f66026b" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM" Name="MetaforaMN_IM" DisplayName="Metafora MN_ IM" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora MN_ IM" />
-    <Connector Id="6ee1bbf6-4416-40db-83c6-1d30e07387b5" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF" Name="MetaforaIM_EF" DisplayName="Metafora IM_ EF" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora IM_ EF" />
-    <Connector Id="c76fac90-e998-4d23-bd52-f35d908cfe37" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN" Name="MetaforaIM_VN" DisplayName="Metafora IM_ VN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora IM_ VN" />
-    <Connector Id="9ee47718-b94a-4dc9-ab65-c247928f152a" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN" Name="MetaforaBT_VN" DisplayName="Metafora BT_ VN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora BT_ VN" />
+    <Connector Id="6a0d9478-cb89-4307-bb28-ec7ba0bf78f7" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT" Name="MetaforaVN_BT" DisplayName="Metafora VN_ BT" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora VN_ BT" Color="Fuchsia" />
+    <Connector Id="71344854-a4cd-4f5c-b3ea-5bb50768d922" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN" Name="MetaforaVN_MN" DisplayName="Metafora VN_ MN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora VN_ MN" Color="64, 64, 64" />
+    <Connector Id="7575a0f6-3db8-4550-87b2-62ee6b5e1652" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF" Name="MetaforaBT_EF" DisplayName="Metafora BT_ EF" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora BT_ EF" TargetEndStyle="FilledArrow" />
+    <Connector Id="6a9217e9-f151-4e53-99db-9ae33f66026b" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM" Name="MetaforaMN_IM" DisplayName="Metafora MN_ IM" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora MN_ IM" Color="Gray" />
+    <Connector Id="6ee1bbf6-4416-40db-83c6-1d30e07387b5" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF" Name="MetaforaIM_EF" DisplayName="Metafora IM_ EF" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora IM_ EF" SourceEndStyle="FilledArrow" />
+    <Connector Id="c76fac90-e998-4d23-bd52-f35d908cfe37" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN" Name="MetaforaIM_VN" DisplayName="Metafora IM_ VN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora IM_ VN" Color="128, 255, 255" DashStyle="Dot" SourceEndStyle="EmptyArrow" />
+    <Connector Id="9ee47718-b94a-4dc9-ab65-c247928f152a" Description="Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN" Name="MetaforaBT_VN" DisplayName="Metafora BT_ VN" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS" FixedTooltipText="Metafora BT_ VN" Color="128, 255, 255" DashStyle="Dot" SourceEndStyle="EmptyArrow" />
   </Connectors>
   <XmlSerializationBehavior Name="GVSJGGGASLProyectoIPSSerializationBehavior" Namespace="UPM_IPS.GVSJGGGASLProyectoIPS">
     <ClassData>
       <XmlClassData TypeName="Tapiz" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizMoniker" ElementName="tapiz" MonikerTypeName="TapizMoniker">
         <DomainClassMoniker Name="Tapiz" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="ventana">
-            <DomainRelationshipMoniker Name="TapizHasVentana" />
-          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="estadoDeFin">
             <DomainRelationshipMoniker Name="TapizHasEstadoDeFin" />
           </XmlRelationshipData>
@@ -382,6 +403,12 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="itemsMenu">
             <DomainRelationshipMoniker Name="TapizHasItemsMenu" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaPrincipal">
+            <DomainRelationshipMoniker Name="TapizHasVentanaPrincipal" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundaria">
+            <DomainRelationshipMoniker Name="TapizHasVentanaSecundaria" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -464,9 +491,6 @@
       <XmlClassData TypeName="EstadoDeFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoDeFinMoniker" ElementName="estadoDeFin" MonikerTypeName="EstadoDeFinMoniker">
         <DomainClassMoniker Name="EstadoDeFin" />
       </XmlClassData>
-      <XmlClassData TypeName="TapizHasVentana" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasVentanaMoniker" ElementName="tapizHasVentana" MonikerTypeName="TapizHasVentanaMoniker">
-        <DomainRelationshipMoniker Name="TapizHasVentana" />
-      </XmlClassData>
       <XmlClassData TypeName="RelacionDeFinalizacionB" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionDeFinalizacionBMoniker" ElementName="relacionDeFinalizacionB" MonikerTypeName="RelacionDeFinalizacionBMoniker">
         <DomainRelationshipMoniker Name="RelacionDeFinalizacionB" />
       </XmlClassData>
@@ -538,6 +562,12 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaBT_VN" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaBT_VNMoniker" ElementName="metaforaBT_VN" MonikerTypeName="MetaforaBT_VNMoniker">
         <ConnectorMoniker Name="MetaforaBT_VN" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizHasVentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasVentanaPrincipalMoniker" ElementName="tapizHasVentanaPrincipal" MonikerTypeName="TapizHasVentanaPrincipalMoniker">
+        <DomainRelationshipMoniker Name="TapizHasVentanaPrincipal" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizHasVentanaSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizHasVentanaSecundariaMoniker" ElementName="tapizHasVentanaSecundaria" MonikerTypeName="TapizHasVentanaSecundariaMoniker">
+        <DomainRelationshipMoniker Name="TapizHasVentanaSecundaria" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -683,36 +713,6 @@
     </Class>
     <ShapeMaps>
       <ShapeMap>
-        <DomainClassMoniker Name="VentanaSecundaria" />
-        <ParentElementPath>
-          <DomainPath>TapizHasVentana.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaVentanaSecundaria/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Ventana/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaVentanaSecundaria" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="Ventana" />
-        <ParentElementPath>
-          <DomainPath>TapizHasVentana.Tapiz/!Tapiz</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaVentanaPrincipal/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Ventana/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaVentanaPrincipal" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="EstadoDeFin" />
         <ParentElementPath>
           <DomainPath>TapizHasEstadoDeFin.Tapiz/!Tapiz</DomainPath>
@@ -764,6 +764,20 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaBoton" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="VentanaSecundaria" />
+        <ParentElementPath>
+          <DomainPath>TapizHasVentanaSecundaria.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="MetaforaVentanaSecundaria" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="VentanaPrincipal" />
+        <ParentElementPath>
+          <DomainPath>TapizHasVentanaPrincipal.Tapiz/!Tapiz</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="MetaforaVentanaPrincipal" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -804,7 +818,7 @@
       <XmlSerializationBehaviorMoniker Name="GVSJGGGASLProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Objects">
-      <ElementTool Name="VentanaPrincipalT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalT" Tooltip="Ventana Principal T" HelpKeyword="VentanaPrincipalT">
+      <ElementTool Name="VentanaPrincipalT" ToolboxIcon="Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalT" Tooltip="Ventana Principal T" HelpKeyword="VentanaPrincipalT">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
       <ElementTool Name="VentanaSecundariaT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaSecundariaT" Tooltip="Ventana Secundaria T" HelpKeyword="VentanaSecundariaT">
