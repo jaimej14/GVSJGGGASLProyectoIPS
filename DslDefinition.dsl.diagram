@@ -247,7 +247,7 @@
         <microsoft.VisualStudio.Modeling.DslDesigner.GeometryShapeShape Id="1c5225e9-16c4-4255-96a0-c7129d3b12eb" absoluteBounds="9.6166666716337215, 5.5726318359374991, 1.7099861592054371, 1.2010807291666668">
           <RootNodeMoniker Id="00831c24-f2f8-42e2-87fd-2a1220917905" />
           <nestedChildShapes>
-            <elementListCompartment Id="ae4aaded-801e-48a9-a3ec-87fb9c31e61d" absoluteBounds="9.631666671633722, 5.9726318359374995, 1.6799861592054368, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+            <elementListCompartment Id="ae4aaded-801e-48a9-a3ec-87fb9c31e61d" isExpanded="false" absoluteBounds="9.631666671633722, 5.9726318359374995, 1.6799861592054373, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
             <elementListCompartment Id="65f0f98a-50c6-4e2d-8b61-23f6ff473b8e" absoluteBounds="9.631666671633722, 6.2320214843749993, 1.6799861592054368, 0.44169108072916663" name="Decorators" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.GeometryShapeShape>

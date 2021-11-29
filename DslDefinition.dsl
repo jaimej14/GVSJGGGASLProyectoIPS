@@ -818,45 +818,45 @@
       <XmlSerializationBehaviorMoniker Name="GVSJGGGASLProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Objects">
-      <ElementTool Name="VentanaPrincipalT" ToolboxIcon="Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalT" Tooltip="Ventana Principal T" HelpKeyword="VentanaPrincipalT">
+      <ElementTool Name="VentanaPrincipalT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalT" Tooltip="Ventana Principal T" HelpKeyword="VentanaPrincipalT">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VentanaSecundariaT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaSecundariaT" Tooltip="Ventana Secundaria T" HelpKeyword="VentanaSecundariaT">
+      <ElementTool Name="VentanaSecundariaT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaSecundariaT" Tooltip="Ventana Secundaria T" HelpKeyword="VentanaSecundariaT">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
-      <ElementTool Name="MenuT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="MenuT" Tooltip="Menu T" HelpKeyword="MenuT">
+      <ElementTool Name="MenuT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="MenuT" Tooltip="Menu T" HelpKeyword="MenuT">
         <DomainClassMoniker Name="Menu" />
       </ElementTool>
-      <ElementTool Name="ItemsMenuT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="ItemsMenuT" Tooltip="Items Menu T" HelpKeyword="ItemsMenuT">
+      <ElementTool Name="ItemsMenuT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="ItemsMenuT" Tooltip="Items Menu T" HelpKeyword="ItemsMenuT">
         <DomainClassMoniker Name="ItemsMenu" />
       </ElementTool>
-      <ElementTool Name="BotonT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="BotonT" Tooltip="Boton T" HelpKeyword="BotonT">
+      <ElementTool Name="BotonT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="BotonT" Tooltip="Boton T" HelpKeyword="BotonT">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
-      <ElementTool Name="EstadoDeFinT" ToolboxIcon=".\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="EstadoDeFinT" Tooltip="Estado De Fin T" HelpKeyword="EstadoDeFinT">
+      <ElementTool Name="EstadoDeFinT" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleShapeToolBitmap.bmp" Caption="EstadoDeFinT" Tooltip="Estado De Fin T" HelpKeyword="EstadoDeFinT">
         <DomainClassMoniker Name="EstadoDeFin" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Relations">
-      <ConnectionTool Name="VN_BTt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="VN_BTt" Tooltip="VN_ BTt" HelpKeyword="VN_BTt">
+      <ConnectionTool Name="RelacionVentanaBoton" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionVentanaBoton" Tooltip="Relacion Ventana Boton" HelpKeyword="RelacionVentanaBoton">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaReferencesBotonBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="VN_MNt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="VN_MNt" Tooltip="VN_ MNt" HelpKeyword="VN_MNt">
+      <ConnectionTool Name="RelacionVentanaMenu" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionVentanaMenu" Tooltip="Relacion Ventana Menu" HelpKeyword="RelacionVentanaMenu">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaReferencesMenuBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="BT_EFt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="BT_EFt" Tooltip="BT_ EFt" HelpKeyword="BT_EFt">
+      <ConnectionTool Name="BotonEstadoFin" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="BotonEstadoFin" Tooltip="Boton Estado Fin" HelpKeyword="BotonEstadoFin">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/RelacionDeFinalizacionBBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="AccionBotont" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="AccionBotont" Tooltip="Accion Botont" HelpKeyword="AccionBotont">
+      <ConnectionTool Name="AccionBoton" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="AccionBoton" Tooltip="Accion Boton" HelpKeyword="AccionBoton">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/RelacionDeAccionBBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="MN_IMt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="MN_IMt" Tooltip="MN_ IMt" HelpKeyword="MN_IMt">
+      <ConnectionTool Name="RelacionMenuItemMenu" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="RelacionMenuItemMenu" Tooltip="Relacion Menu Item Menu" HelpKeyword="RelacionMenuItemMenu">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/MenuReferencesItemsMenuBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="FinalizacionMt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="FinalizacionMt" Tooltip="Finalizacion Mt" HelpKeyword="FinalizacionMt">
+      <ConnectionTool Name="ItemMenuFinalizacion" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemMenuFinalizacion" Tooltip="Item Menu Finalizacion" HelpKeyword="ItemMenuFinalizacion">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/RelacionDeFinalizacionMBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="AccionMt" ToolboxIcon=".\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="AccionMt" Tooltip="Accion Mt" HelpKeyword="AccionMt">
+      <ConnectionTool Name="AccionMenu" ToolboxIcon="C:\GVSJGGGASLProyectoIPS\Dsl\Resources\ExampleConnectorToolBitmap.bmp" Caption="AccionMenu" Tooltip="Accion Menu" HelpKeyword="AccionMenu">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/RelacionDeAccionMBuilder" />
       </ConnectionTool>
     </ToolboxTab>
