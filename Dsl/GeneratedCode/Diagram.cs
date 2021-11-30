@@ -23,7 +23,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDiagram.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("733b6c84-76a7-46e2-bd48-812783e66985")]
+	[DslModeling::DomainObjectId("e09f687d-90fb-4042-95cd-cd546b6213c7")]
 	public partial class GVSJGGGASLProyectoIPSDiagram : DslDiagrams::Diagram
 	{
 		#region Diagram boilerplate
@@ -191,33 +191,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria)
-			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal)
 			{
 				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaPrincipal newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaPrincipal(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoDeFin newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoDeFin(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemsMenu newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemsMenu(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
-			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -227,39 +209,57 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoFin newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaEstadoFin(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneBotons newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneBotons(this.Partition);
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneMenus newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneMenus(this.Partition);
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Fin newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Fin(this.Partition);
 				return newShape;
 			}
-			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM)
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana)
 			{
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN(this.Partition);
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Ventana newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Ventana(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu)
+			{
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenuTieneItemMenus newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenuTieneItemMenus(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin)
+			{
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_EstadoFin newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_EstadoFin(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana)
+			{
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_Ventana newShape = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_Ventana(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -273,29 +273,10 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaSecundaria.DecoratorsInitialized += MetaforaVentanaSecundariaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaPrincipal.DecoratorsInitialized += MetaforaVentanaPrincipalDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemsMenu.DecoratorsInitialized += MetaforaItemsMenuDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu.DecoratorsInitialized += MetaforaMenuDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton.DecoratorsInitialized += MetaforaBotonDecoratorMap.OnDecoratorsInitialized;
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaVentanaSecundaria.
-		/// </summary>
-		internal static partial class MetaforaVentanaSecundariaDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaVentanaSecundaria.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenu.DecoratorsInitialized += MetaforaMenuDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu.DecoratorsInitialized += MetaforaItemMenuDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -317,20 +298,20 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaItemsMenu.
+		/// Class containing decorator path traversal methods for MetaforaBoton.
 		/// </summary>
-		internal static partial class MetaforaItemsMenuDecoratorMap
+		internal static partial class MetaforaBotonDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaItemsMenu.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for MetaforaBoton.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu.tituloDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tiuloDec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -347,26 +328,26 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu.tituloDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tituloDec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaBoton.
+		/// Class containing decorator path traversal methods for MetaforaItemMenu.
 		/// </summary>
-		internal static partial class MetaforaBotonDecoratorMap
+		internal static partial class MetaforaItemMenuDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaBoton.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for MetaforaItemMenu.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton.tituloDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tituloDec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -374,13 +355,13 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.VN_BTtConnectAction vN_BTtConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.VN_MNtConnectAction vN_MNtConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.BT_EFtConnectAction bT_EFtConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.AccionBotontConnectAction accionBotontConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.MN_IMtConnectAction mN_IMtConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.FinalizacionMtConnectAction finalizacionMtConnectAction;
-		private global::UPM_IPS.GVSJGGGASLProyectoIPS.AccionMtConnectAction accionMtConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotonsToolConnectAction ventanaTieneBotonsToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenusToolConnectAction ventanaTieneMenusToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_FinToolConnectAction boton_FinToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_VentanaToolConnectAction boton_VentanaToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenuToolConnectAction menuTieneItemsMenuToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFinToolConnectAction itemMenu_EstadoFinToolConnectAction;
+		private global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_VentanaToolConnectAction itemMenu_VentanaToolConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -403,68 +384,68 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.VN_BTtFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.VentanaTieneBotonsToolFilterString))
 				{
-					if (this.vN_BTtConnectAction == null)
+					if (this.ventanaTieneBotonsToolConnectAction == null)
 					{
-						this.vN_BTtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VN_BTtConnectAction(this);
-						this.vN_BTtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.ventanaTieneBotonsToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotonsToolConnectAction(this);
+						this.ventanaTieneBotonsToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.vN_BTtConnectAction;
+					action = this.ventanaTieneBotonsToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.VN_MNtFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.VentanaTieneMenusToolFilterString))
 				{
-					if (this.vN_MNtConnectAction == null)
+					if (this.ventanaTieneMenusToolConnectAction == null)
 					{
-						this.vN_MNtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VN_MNtConnectAction(this);
-						this.vN_MNtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.ventanaTieneMenusToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenusToolConnectAction(this);
+						this.ventanaTieneMenusToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.vN_MNtConnectAction;
+					action = this.ventanaTieneMenusToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.BT_EFtFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.Boton_FinToolFilterString))
 				{
-					if (this.bT_EFtConnectAction == null)
+					if (this.boton_FinToolConnectAction == null)
 					{
-						this.bT_EFtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.BT_EFtConnectAction(this);
-						this.bT_EFtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.boton_FinToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_FinToolConnectAction(this);
+						this.boton_FinToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.bT_EFtConnectAction;
+					action = this.boton_FinToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.AccionBotontFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.Boton_VentanaToolFilterString))
 				{
-					if (this.accionBotontConnectAction == null)
+					if (this.boton_VentanaToolConnectAction == null)
 					{
-						this.accionBotontConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.AccionBotontConnectAction(this);
-						this.accionBotontConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.boton_VentanaToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_VentanaToolConnectAction(this);
+						this.boton_VentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.accionBotontConnectAction;
+					action = this.boton_VentanaToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.MN_IMtFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.MenuTieneItemsMenuToolFilterString))
 				{
-					if (this.mN_IMtConnectAction == null)
+					if (this.menuTieneItemsMenuToolConnectAction == null)
 					{
-						this.mN_IMtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MN_IMtConnectAction(this);
-						this.mN_IMtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.menuTieneItemsMenuToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenuToolConnectAction(this);
+						this.menuTieneItemsMenuToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.mN_IMtConnectAction;
+					action = this.menuTieneItemsMenuToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.FinalizacionMtFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.ItemMenu_EstadoFinToolFilterString))
 				{
-					if (this.finalizacionMtConnectAction == null)
+					if (this.itemMenu_EstadoFinToolConnectAction == null)
 					{
-						this.finalizacionMtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.FinalizacionMtConnectAction(this);
-						this.finalizacionMtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.itemMenu_EstadoFinToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFinToolConnectAction(this);
+						this.itemMenu_EstadoFinToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.finalizacionMtConnectAction;
+					action = this.itemMenu_EstadoFinToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.AccionMtFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSToolboxHelper.ItemMenu_VentanaToolFilterString))
 				{
-					if (this.accionMtConnectAction == null)
+					if (this.itemMenu_VentanaToolConnectAction == null)
 					{
-						this.accionMtConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.AccionMtConnectAction(this);
-						this.accionMtConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.itemMenu_VentanaToolConnectAction = new global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_VentanaToolConnectAction(this);
+						this.itemMenu_VentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.accionMtConnectAction;
+					action = this.itemMenu_VentanaToolConnectAction;
 				} 
 				else
 				{
@@ -523,40 +504,40 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			{
 				if(disposing)
 				{
-					if(this.vN_BTtConnectAction != null)
+					if(this.ventanaTieneBotonsToolConnectAction != null)
 					{
-						this.vN_BTtConnectAction.Dispose();
-						this.vN_BTtConnectAction = null;
+						this.ventanaTieneBotonsToolConnectAction.Dispose();
+						this.ventanaTieneBotonsToolConnectAction = null;
 					}
-					if(this.vN_MNtConnectAction != null)
+					if(this.ventanaTieneMenusToolConnectAction != null)
 					{
-						this.vN_MNtConnectAction.Dispose();
-						this.vN_MNtConnectAction = null;
+						this.ventanaTieneMenusToolConnectAction.Dispose();
+						this.ventanaTieneMenusToolConnectAction = null;
 					}
-					if(this.bT_EFtConnectAction != null)
+					if(this.boton_FinToolConnectAction != null)
 					{
-						this.bT_EFtConnectAction.Dispose();
-						this.bT_EFtConnectAction = null;
+						this.boton_FinToolConnectAction.Dispose();
+						this.boton_FinToolConnectAction = null;
 					}
-					if(this.accionBotontConnectAction != null)
+					if(this.boton_VentanaToolConnectAction != null)
 					{
-						this.accionBotontConnectAction.Dispose();
-						this.accionBotontConnectAction = null;
+						this.boton_VentanaToolConnectAction.Dispose();
+						this.boton_VentanaToolConnectAction = null;
 					}
-					if(this.mN_IMtConnectAction != null)
+					if(this.menuTieneItemsMenuToolConnectAction != null)
 					{
-						this.mN_IMtConnectAction.Dispose();
-						this.mN_IMtConnectAction = null;
+						this.menuTieneItemsMenuToolConnectAction.Dispose();
+						this.menuTieneItemsMenuToolConnectAction = null;
 					}
-					if(this.finalizacionMtConnectAction != null)
+					if(this.itemMenu_EstadoFinToolConnectAction != null)
 					{
-						this.finalizacionMtConnectAction.Dispose();
-						this.finalizacionMtConnectAction = null;
+						this.itemMenu_EstadoFinToolConnectAction.Dispose();
+						this.itemMenu_EstadoFinToolConnectAction = null;
 					}
-					if(this.accionMtConnectAction != null)
+					if(this.itemMenu_VentanaToolConnectAction != null)
 					{
-						this.accionMtConnectAction.Dispose();
-						this.accionMtConnectAction = null;
+						this.itemMenu_VentanaToolConnectAction.Dispose();
+						this.itemMenu_VentanaToolConnectAction = null;
 					}
 				}
 			}
@@ -570,7 +551,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// GVSJGGGASLProyectoIPSDiagram domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x733b6c84, 0x76a7, 0x46e2, 0xbd, 0x48, 0x81, 0x27, 0x83, 0xe6, 0x69, 0x85);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe09f687d, 0x90fb, 0x4042, 0x95, 0xcd, 0xcd, 0x54, 0x6b, 0x62, 0x13, 0xc7);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -611,19 +592,19 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -639,29 +620,29 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
+				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal)
+				{
+					parentElement = GetParentForVentanaPrincipal((global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal)childElement);
+				} else
 				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria)
 				{
 					parentElement = GetParentForVentanaSecundaria((global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria)childElement);
 				} else
-				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
 				{
-					parentElement = GetParentForVentana((global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)childElement);
-				} else
-				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-				{
-					parentElement = GetParentForEstadoDeFin((global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)childElement);
-				} else
-				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-				{
-					parentElement = GetParentForItemsMenu((global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)childElement);
+					parentElement = GetParentForBoton((global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)childElement);
 				} else
 				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
 				{
 					parentElement = GetParentForMenu((global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)childElement);
 				} else
-				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
 				{
-					parentElement = GetParentForBoton((global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)childElement);
+					parentElement = GetParentForItemMenu((global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)childElement);
+				} else
+				if(childElement is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+				{
+					parentElement = GetParentForEstadoFin((global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)childElement);
 				} else
 				{
 					parentElement = null;
@@ -672,28 +653,21 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForVentanaSecundaria( global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana root )
+			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForVentanaPrincipal( global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForVentana( global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana root )
+			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForVentanaSecundaria( global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForEstadoDeFin( global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForItemsMenu( global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu root )
+			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForBoton( global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
@@ -707,7 +681,14 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForBoton( global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton root )
+			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForItemMenu( global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz GetParentForEstadoFin( global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz result = root.Tapiz;
@@ -803,13 +784,13 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

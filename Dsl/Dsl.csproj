@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BD9A6981-886A-4990-A71A-7D646DEF70CB}</ProjectGuid>
+    <ProjectGuid>{387538BF-573A-4EED-854B-1A05B0667AFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UPM_IPS.GVSJGGGASLProyectoIPS</RootNamespace>
@@ -159,9 +159,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\DslDefinition.dsl.diagram">
+    <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
-      <Link>DslDefinition.dsl.diagram</Link>
     </None>
     <None Include="GeneratedCode\ConnectionBuilders.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -179,9 +178,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DomainRelationships.cs</LastGenOutput>
     </None>
-    <None Include="..\DslDefinition.dsl">
-      <Link>DslDefinition.dsl</Link>
-    </None>
+    <None Include="DslDefinition.dsl" />
     <None Include="GeneratedCode\Connectors.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Connectors.cs</LastGenOutput>

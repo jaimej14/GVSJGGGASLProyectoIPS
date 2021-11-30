@@ -28,15 +28,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		public static readonly global::System.ComponentModel.Design.CommandID ViewGVSJGGGASLProyectoIPSExplorerCommand = new global::System.ComponentModel.Design.CommandID(new global::System.Guid(GVSJGGGASLProyectoIPSCommandSetId), 0x0001);
 	
 		// Package identifier
-		public const string GVSJGGGASLProyectoIPSPackageId = "ef91a6af-7888-4f47-bc06-1c183cd8f996";
+		public const string GVSJGGGASLProyectoIPSPackageId = "978f62d7-25ba-4333-995b-bd65423e255b";
 		
 		// Editor factory identifier
-		public const string GVSJGGGASLProyectoIPSEditorFactoryId = "47d71fa4-cfd3-4123-8d15-58dea22efa6c";
+		public const string GVSJGGGASLProyectoIPSEditorFactoryId = "ed987b9c-01e6-46db-a2ee-24aece88a9ad";
 		
 		public const string DefaultDiagramExtension = ".diagram";
 		
 		// Model explorer tool window identifier
-		public const string GVSJGGGASLProyectoIPSModelExplorerToolWindowId = "401241a0-7961-498f-b37e-8a4af91ef4e3";
+		public const string GVSJGGGASLProyectoIPSModelExplorerToolWindowId = "ddee80ea-ea8c-4a06-b576-457f8f3d0a82";
 	}
 }
 //
@@ -47,6 +47,6 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	internal static partial class Constants
 	{
 		// Menu identifier
-		public const string GVSJGGGASLProyectoIPSCommandSetId = "07cdc10b-5ad5-4dee-add6-11772993f1bb";
+		public const string GVSJGGGASLProyectoIPSCommandSetId = "4810692c-f2d5-4a3b-a011-339ef15ab2e1";
 	}
 }

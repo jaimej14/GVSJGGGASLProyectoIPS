@@ -1,10 +1,10 @@
 ﻿<!--DSL Tools Language Template-->
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<TemplateData>
-		<TemplateID>{9d1fe1aa-d6c9-4865-9601-f48e6614ffbb}</TemplateID>
-		<Name Package="{ef91a6af-7888-4f47-bc06-1c183cd8f996}" ID="103"/>
-		<Description Package="{ef91a6af-7888-4f47-bc06-1c183cd8f996}" ID="102"/>
-		<Icon Package="{ef91a6af-7888-4f47-bc06-1c183cd8f996}" ID="201" />
+		<TemplateID>{bb635d3c-5a1b-4bff-8c04-2ca63ccab7db}</TemplateID>
+		<Name Package="{978f62d7-25ba-4333-995b-bd65423e255b}" ID="103"/>
+		<Description Package="{978f62d7-25ba-4333-995b-bd65423e255b}" ID="102"/>
+		<Icon Package="{978f62d7-25ba-4333-995b-bd65423e255b}" ID="201" />
 		<ProjectType>CSharp</ProjectType>
 		<SortOrder>360</SortOrder>
 		<DefaultName>GVSJGGGASLProyectoIPS.GVSJGGGASL_DSLProyIPS</DefaultName>

@@ -14,15 +14,15 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaVN_BT
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT
+	/// DomainClass MetaforaVentanaTieneBotons
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneBotons
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_BT.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneBotons.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneBotons.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("6a0d9478-cb89-4307-bb28-ec7ba0bf78f7")]
-	public partial class MetaforaVN_BT : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("a2eddc45-2ce7-4ebf-816e-12d9b784b391")]
+	public partial class MetaforaVentanaTieneBotons : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -87,9 +87,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaVN_BT.
+		/// Finds a decorator associated with MetaforaVentanaTieneBotons.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaVN_BTDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaVentanaTieneBotonsDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -98,20 +98,39 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromArgb(255, 255, 128, 255);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromArgb(255, 255, 128, 255);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaVN_BT domain class Id.
+		/// MetaforaVentanaTieneBotons domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6a0d9478, 0xcb89, 0x4307, 0xbb, 0x28, 0xec, 0x7b, 0xa0, 0xbf, 0x78, 0xf7);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa2eddc45, 0x2ce7, 0x4ebf, 0x81, 0x6e, 0x12, 0xd9, 0xb7, 0x84, 0xb3, 0x91);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaVN_BT(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaVentanaTieneBotons(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -121,7 +140,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaVN_BT(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaVentanaTieneBotons(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -131,15 +150,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaVN_MN
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN
+	/// DomainClass MetaforaVentanaTieneMenus
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneMenus
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVN_MN.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneMenus.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaVentanaTieneMenus.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("71344854-a4cd-4f5c-b3ea-5bb50768d922")]
-	public partial class MetaforaVN_MN : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("b7ed6f33-c707-426d-96c0-f326d446b718")]
+	public partial class MetaforaVentanaTieneMenus : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -204,9 +223,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaVN_MN.
+		/// Finds a decorator associated with MetaforaVentanaTieneMenus.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaVN_MNDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaVentanaTieneMenusDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -215,20 +234,39 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DimGray);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.DimGray);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaVN_MN domain class Id.
+		/// MetaforaVentanaTieneMenus domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x71344854, 0xa4cd, 0x4f5c, 0xb3, 0xea, 0x5b, 0xb5, 0x07, 0x68, 0xd9, 0x22);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb7ed6f33, 0xc707, 0x426d, 0x96, 0xc0, 0xf3, 0x26, 0xd4, 0x46, 0xb7, 0x18);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaVN_MN(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaVentanaTieneMenus(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -238,7 +276,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaVN_MN(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaVentanaTieneMenus(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -248,15 +286,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaBT_EF
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF
+	/// DomainClass MetaforaBoton_Fin
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Fin
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_EF.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Fin.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Fin.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("7575a0f6-3db8-4550-87b2-62ee6b5e1652")]
-	public partial class MetaforaBT_EF : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("ddd6f5e8-a43e-4fbf-9a65-e901cdfc4261")]
+	public partial class MetaforaBoton_Fin : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -321,9 +359,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaBT_EF.
+		/// Finds a decorator associated with MetaforaBoton_Fin.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaBT_EFDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaBoton_FinDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -332,20 +370,29 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorFilledArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaBT_EF domain class Id.
+		/// MetaforaBoton_Fin domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7575a0f6, 0x3db8, 0x4550, 0x87, 0xb2, 0x62, 0xee, 0x6b, 0x5e, 0x16, 0x52);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xddd6f5e8, 0xa43e, 0x4fbf, 0x9a, 0x65, 0xe9, 0x01, 0xcd, 0xfc, 0x42, 0x61);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaBT_EF(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaBoton_Fin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -355,7 +402,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaBT_EF(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaBoton_Fin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -365,15 +412,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaMN_IM
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM
+	/// DomainClass MetaforaBoton_Ventana
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Ventana
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMN_IM.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Ventana.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBoton_Ventana.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("6a9217e9-f151-4e53-99db-9ae33f66026b")]
-	public partial class MetaforaMN_IM : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("1147d487-60b7-4dd6-bb00-c8cd96c5c27f")]
+	public partial class MetaforaBoton_Ventana : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -438,9 +485,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaMN_IM.
+		/// Finds a decorator associated with MetaforaBoton_Ventana.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaMN_IMDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaBoton_VentanaDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -449,20 +496,49 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Aqua);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dot;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Aqua);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorEmptyArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaMN_IM domain class Id.
+		/// MetaforaBoton_Ventana domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6a9217e9, 0xf151, 0x4e53, 0x99, 0xdb, 0x9a, 0xe3, 0x3f, 0x66, 0x02, 0x6b);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1147d487, 0x60b7, 0x4dd6, 0xbb, 0x00, 0xc8, 0xcd, 0x96, 0xc5, 0xc2, 0x7f);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaMN_IM(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaBoton_Ventana(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -472,7 +548,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaMN_IM(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaBoton_Ventana(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -482,15 +558,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaIM_EF
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF
+	/// DomainClass MetaforaMenuTieneItemMenus
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenuTieneItemMenus
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_EF.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenuTieneItemMenus.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaMenuTieneItemMenus.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("6ee1bbf6-4416-40db-83c6-1d30e07387b5")]
-	public partial class MetaforaIM_EF : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("a4332f39-a73a-4862-95a1-931b3bfe38ed")]
+	public partial class MetaforaMenuTieneItemMenus : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -555,9 +631,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaIM_EF.
+		/// Finds a decorator associated with MetaforaMenuTieneItemMenus.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaIM_EFDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaMenuTieneItemMenusDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -566,20 +642,39 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gray);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gray);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaIM_EF domain class Id.
+		/// MetaforaMenuTieneItemMenus domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6ee1bbf6, 0x4416, 0x40db, 0x83, 0xc6, 0x1d, 0x30, 0xe0, 0x73, 0x87, 0xb5);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa4332f39, 0xa73a, 0x4862, 0x95, 0xa1, 0x93, 0x1b, 0x3b, 0xfe, 0x38, 0xed);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaIM_EF(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaMenuTieneItemMenus(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -589,7 +684,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaIM_EF(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaMenuTieneItemMenus(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -599,15 +694,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaIM_VN
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN
+	/// DomainClass MetaforaItemMenu_EstadoFin
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_EstadoFin
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaIM_VN.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_EstadoFin.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_EstadoFin.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("c76fac90-e998-4d23-bd52-f35d908cfe37")]
-	public partial class MetaforaIM_VN : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("634a9dcf-edb8-4d48-8fa6-e07232a29867")]
+	public partial class MetaforaItemMenu_EstadoFin : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -672,9 +767,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaIM_VN.
+		/// Finds a decorator associated with MetaforaItemMenu_EstadoFin.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaIM_VNDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaItemMenu_EstadoFinDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -683,20 +778,29 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorFilledArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaIM_VN domain class Id.
+		/// MetaforaItemMenu_EstadoFin domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc76fac90, 0xe998, 0x4d23, 0xbd, 0x52, 0xf3, 0x5d, 0x90, 0x8c, 0xfe, 0x37);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x634a9dcf, 0xedb8, 0x4d48, 0x8f, 0xa6, 0xe0, 0x72, 0x32, 0xa2, 0x98, 0x67);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaIM_VN(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaItemMenu_EstadoFin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -706,7 +810,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaIM_VN(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaItemMenu_EstadoFin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -716,15 +820,15 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaBT_VN
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN
+	/// DomainClass MetaforaItemMenu_Ventana
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_Ventana
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaBT_VN.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_Ventana.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.MetaforaItemMenu_Ventana.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("9ee47718-b94a-4dc9-ab65-c247928f152a")]
-	public partial class MetaforaBT_VN : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("168dff71-fb32-4518-abd8-40b49807c3ac")]
+	public partial class MetaforaItemMenu_Ventana : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -789,9 +893,9 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaBT_VN.
+		/// Finds a decorator associated with MetaforaItemMenu_Ventana.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaBT_VNDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaItemMenu_VentanaDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -800,20 +904,49 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Line pen settings for this connector.
+			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
+			linePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Aqua);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLineDecorator, linePen);
+			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dot;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
+			DslDiagrams::BrushSettings lineBrush = new DslDiagrams::BrushSettings();
+			lineBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Aqua);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ConnectionLineDecorator, lineBrush);
+			
+		}
+		
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorEmptyArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaBT_VN domain class Id.
+		/// MetaforaItemMenu_Ventana domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9ee47718, 0xb94a, 0x4dc9, 0xab, 0x65, 0xc2, 0x47, 0x92, 0x8f, 0x15, 0x2a);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x168dff71, 0xfb32, 0x4518, 0xab, 0xd8, 0x40, 0xb4, 0x98, 0x07, 0xc3, 0xac);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaBT_VN(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaItemMenu_Ventana(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -823,7 +956,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaBT_VN(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaItemMenu_Ventana(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

@@ -2,6 +2,6 @@
 <#
 	// CmdSet Guid must be defined before master template is included
 	// This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt
-	Guid guidCmdSet = new Guid ("07cdc10b-5ad5-4dee-add6-11772993f1bb");
+	Guid guidCmdSet = new Guid ("4810692c-f2d5-4a3b-a011-339ef15ab2e1");
 #>
 <#@ include file="DslPackage\GeneratedVSCT.tt" #>

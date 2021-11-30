@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 12
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{6f54ee06-ae01-44aa-91e6-5fe9a0a0895a}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{33de2dc4-dd6b-4fc3-b356-f195d85b469e}"
 EndProject
 Global
 	GlobalSection(TextTemplating) = postSolution
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6f54ee06-ae01-44aa-91e6-5fe9a0a0895a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6f54ee06-ae01-44aa-91e6-5fe9a0a0895a}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6f54ee06-ae01-44aa-91e6-5fe9a0a0895a}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6f54ee06-ae01-44aa-91e6-5fe9a0a0895a}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33de2dc4-dd6b-4fc3-b356-f195d85b469e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33de2dc4-dd6b-4fc3-b356-f195d85b469e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33de2dc4-dd6b-4fc3-b356-f195d85b469e}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33de2dc4-dd6b-4fc3-b356-f195d85b469e}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

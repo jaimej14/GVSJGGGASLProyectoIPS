@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<gVSJGGGASLProyectoIPSDiagram dslVersion="1.0.0.0" Id="9c518104-810a-4f3e-98e9-c1f6e53d7cef" absoluteBounds="0, 0, 11, 8.5" name="Sample">
-  <exampleModelMoniker Id="e3c070db-cfe6-49d9-8c92-f5af878e2c86" />
+<gVSJGGGASLProyectoIPSDiagram dslVersion="1.0.0.0" Id="a5c11c09-8aed-4c71-ab4c-f63f7a667f28" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="c1177c50-ea54-41a5-82c4-730843855005" />
   <nestedChildShapes>
-    <exampleShape Id="e363b267-054c-4ab4-b2ee-ea94294119c3" absoluteBounds="0.5, 1.75, 2, 0.75">
-      <exampleElementMoniker name="/e3c070db-cfe6-49d9-8c92-f5af878e2c86/ExampleElement1" />
+    <exampleShape Id="4e3ae27e-0dc6-45e3-bdc3-63226d533c8a" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/c1177c50-ea54-41a5-82c4-730843855005/ExampleElement1" />
     </exampleShape>
-    <exampleShape Id="a58a6b7e-2526-4076-90f9-e8e36b4712e1" absoluteBounds="3, 0.5, 2, 0.75">
-      <exampleElementMoniker name="/e3c070db-cfe6-49d9-8c92-f5af878e2c86/ExampleElement2" />
+    <exampleShape Id="260cc170-603a-4263-bbdc-d27005ab79cb" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/c1177c50-ea54-41a5-82c4-730843855005/ExampleElement2" />
     </exampleShape>
-    <exampleConnector Id="205e59ec-a72f-461d-971f-8daed96e2b03" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="714c55a8-7893-4d8c-9f53-648096085d0c">
+    <exampleConnector Id="459fbe6a-e781-4a9f-9f3c-5dfd1d028c3c" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c722cff9-5088-45af-b474-c4a067617a7d">
       <nodes>
-        <exampleShapeMoniker Id="e363b267-054c-4ab4-b2ee-ea94294119c3" />
-        <exampleShapeMoniker Id="a58a6b7e-2526-4076-90f9-e8e36b4712e1" />
+        <exampleShapeMoniker Id="4e3ae27e-0dc6-45e3-bdc3-63226d533c8a" />
+        <exampleShapeMoniker Id="260cc170-603a-4263-bbdc-d27005ab79cb" />
       </nodes>
     </exampleConnector>
   </nestedChildShapes>

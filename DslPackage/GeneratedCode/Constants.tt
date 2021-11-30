@@ -8,6 +8,6 @@ namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
 	internal static partial class Constants
 	{
 		// Menu identifier
-		public const string <#= dslName #>CommandSetId = "07cdc10b-5ad5-4dee-add6-11772993f1bb";
+		public const string <#= dslName #>CommandSetId = "4810692c-f2d5-4a3b-a011-339ef15ab2e1";
 	}
 }

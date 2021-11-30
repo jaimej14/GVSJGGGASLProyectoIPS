@@ -19,7 +19,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("983aef27-b0e6-4854-88eb-b260a873fd19")]
+	[DslModeling::DomainObjectId("5cd05756-bc53-4d1b-8140-a2e1ab38e55c")]
 	public partial class Tapiz : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
@@ -27,7 +27,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// Tapiz domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x983aef27, 0xb0e6, 0x4854, 0x88, 0xeb, 0xb2, 0x60, 0xa8, 0x73, 0xfd, 0x19);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5cd05756, 0xbc53, 0x4d1b, 0x81, 0x40, 0xa2, 0xe1, 0xab, 0x38, 0xe5, 0x5c);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -48,78 +48,97 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		{
 		}
 		#endregion
-		#region Ventana opposite domain role accessor
-		
+		#region VentanaPrincipal opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Ventana.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.Tapiz
+		/// Gets or sets VentanaPrincipal.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventana
+		public virtual VentanaPrincipal VentanaPrincipal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.TapizDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.TapizDomainRoleId) as VentanaPrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.TapizDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region EstadoDeFin opposite domain role accessor
+		#region VentanaSecundarium opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of EstadoDeFin.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.Tapiz
+		/// Gets a list of VentanaSecundarium.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstadoDeFin> EstadoDeFin
+		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> VentanaSecundarium
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstadoDeFin>, EstadoDeFin>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.TapizDomainRoleId);
 			}
 		}
 		#endregion
-		#region Boton opposite domain role accessor
+		#region Botons opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Boton.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.Tapiz
+		/// Gets a list of Botons.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Boton> Boton
+		public virtual DslModeling::LinkedElementCollection<Boton> Botons
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.TapizDomainRoleId);
 			}
 		}
 		#endregion
-		#region Menu opposite domain role accessor
+		#region Menus opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Menu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.Tapiz
+		/// Gets a list of Menus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Menu> Menu
+		public virtual DslModeling::LinkedElementCollection<Menu> Menus
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.TapizDomainRoleId);
 			}
 		}
 		#endregion
-		#region ItemsMenu opposite domain role accessor
+		#region ItemMenus opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ItemsMenu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.Tapiz
+		/// Gets a list of ItemMenus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.Tapiz
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ItemsMenu> ItemsMenu
+		public virtual DslModeling::LinkedElementCollection<ItemMenu> ItemMenus
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemsMenu>, ItemsMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.TapizDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemMenu>, ItemMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.TapizDomainRoleId);
+			}
+		}
+		#endregion
+		#region EstadoFinned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of EstadoFinned.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.Tapiz
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<EstadoFin> EstadoFinned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<EstadoFin>, EstadoFin>(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.TapizDomainRoleId);
 			}
 		}
 		#endregion
@@ -143,12 +162,17 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizHasVentanaPrincipal.VentanaPrincipal
+					if (this.VentanaPrincipal != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria.DomainClassId)) 
 				{
 					return true;
 				}
@@ -163,7 +187,12 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin.DomainClassId)) 
 				{
 					return true;
 				}
@@ -192,20 +221,20 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceVentana1 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana;
-			if (sourceVentana1 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
 			{
-				// Create link for path TapizHasVentana.Ventana
-				this.Ventana.Add(sourceVentana1);
+				// Create link for path TapizHasVentanaPrincipal.VentanaPrincipal
+				this.VentanaPrincipal = sourceVentanaPrincipal1;
 
 				return;
 			}
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin sourceEstadoDeFin2 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin;
-			if (sourceEstadoDeFin2 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
 			{
-				// Create link for path TapizHasEstadoDeFin.EstadoDeFin
-				this.EstadoDeFin.Add(sourceEstadoDeFin2);
+				// Create link for path TapizHasVentanaSecundarium.VentanaSecundarium
+				this.VentanaSecundarium.Add(sourceVentanaSecundaria2);
 
 				return;
 			}
@@ -213,8 +242,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton3 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton;
 			if (sourceBoton3 != null)
 			{
-				// Create link for path TapizHasBoton.Boton
-				this.Boton.Add(sourceBoton3);
+				// Create link for path TapizHasBotons.Botons
+				this.Botons.Add(sourceBoton3);
 
 				return;
 			}
@@ -222,17 +251,26 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceMenu4 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu;
 			if (sourceMenu4 != null)
 			{
-				// Create link for path TapizHasMenu.Menu
-				this.Menu.Add(sourceMenu4);
+				// Create link for path TapizHasMenus.Menus
+				this.Menus.Add(sourceMenu4);
 
 				return;
 			}
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceItemsMenu5 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu;
-			if (sourceItemsMenu5 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceItemMenu5 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu;
+			if (sourceItemMenu5 != null)
 			{
-				// Create link for path TapizHasItemsMenu.ItemsMenu
-				this.ItemsMenu.Add(sourceItemsMenu5);
+				// Create link for path TapizHasItemMenus.ItemMenus
+				this.ItemMenus.Add(sourceItemMenu5);
+
+				return;
+			}
+				
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin sourceEstadoFin6 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin;
+			if (sourceEstadoFin6 != null)
+			{
+				// Create link for path TapizHasEstadoFinned.EstadoFinned
+				this.EstadoFinned.Add(sourceEstadoFin6);
 
 				return;
 			}
@@ -259,29 +297,29 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceVentana1 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana;
-			if (sourceVentana1 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
 			{
-				// Delete link for path TapizHasVentana.Ventana
+				// Delete link for path TapizHasVentanaPrincipal.VentanaPrincipal
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceVentana1))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceVentanaPrincipal1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.VentanaDomainRoleId);
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.VentanaPrincipalDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin sourceEstadoDeFin2 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin;
-			if (sourceEstadoDeFin2 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
 			{
-				// Delete link for path TapizHasEstadoDeFin.EstadoDeFin
+				// Delete link for path TapizHasVentanaSecundarium.VentanaSecundarium
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceEstadoDeFin2))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceVentanaSecundaria2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.EstadoDeFinDomainRoleId);
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.VentanaSecundariaDomainRoleId);
 				}
 
 				return;
@@ -290,12 +328,12 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton3 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton;
 			if (sourceBoton3 != null)
 			{
-				// Delete link for path TapizHasBoton.Boton
+				// Delete link for path TapizHasBotons.Botons
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceBoton3))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceBoton3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.BotonDomainRoleId);
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.BotonDomainRoleId);
 				}
 
 				return;
@@ -304,26 +342,40 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceMenu4 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu;
 			if (sourceMenu4 != null)
 			{
-				// Delete link for path TapizHasMenu.Menu
+				// Delete link for path TapizHasMenus.Menus
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceMenu4))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceMenu4))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.MenuDomainRoleId);
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.MenuDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceItemsMenu5 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu;
-			if (sourceItemsMenu5 != null)
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceItemMenu5 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu;
+			if (sourceItemMenu5 != null)
 			{
-				// Delete link for path TapizHasItemsMenu.ItemsMenu
+				// Delete link for path TapizHasItemMenus.ItemMenus
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceItemsMenu5))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceItemMenu5))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.ItemsMenuDomainRoleId);
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.ItemMenuDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin sourceEstadoFin6 = sourceElement as global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin;
+			if (sourceEstadoFin6 != null)
+			{
+				// Delete link for path TapizHasEstadoFinned.EstadoFinned
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.GetLinks((global::UPM_IPS.GVSJGGGASLProyectoIPS.Tapiz)this, sourceEstadoFin6))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.TapizDomainRoleId, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.EstadoFinDomainRoleId);
 				}
 
 				return;
@@ -344,7 +396,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("206b3383-6a7d-40b8-b328-0aa6c651af35")]
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (nombre = {nombrePropertyStorage})")]
+	[DslModeling::DomainObjectId("12b3e506-d3f7-4539-b5c3-265c7f4f8d2e")]
 	public abstract partial class Ventana : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
@@ -352,7 +405,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// Ventana domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x206b3383, 0x6a7d, 0x40b8, 0xb3, 0x28, 0x0a, 0xa6, 0xc6, 0x51, 0xaf, 0x35);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x12b3e506, 0xd3f7, 0x4539, 0xb5, 0xc3, 0x26, 0x5c, 0x7f, 0x4f, 0x8d, 0x2e);
 		/// <summary>
 		/// Constructor.
 		/// </summary>
@@ -368,7 +421,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// nombre domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x93823b4d, 0xf94c, 0x42a1, 0x91, 0x0d, 0x33, 0xa2, 0x31, 0x37, 0xc9, 0xbc);
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0xe1bb9804, 0x3e96, 0x41b8, 0xbe, 0x91, 0x6b, 0xff, 0xb0, 0x91, 0xba, 0x48);
 		
 		/// <summary>
 		/// Storage for nombre
@@ -381,7 +434,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/nombre.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/nombre.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("93823b4d-f94c-42a1-910d-33a23137c9bc")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("e1bb9804-3e96-41b8-be91-6bffb091ba48")]
 		public global::System.String nombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -455,7 +509,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// ancho domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid anchoDomainPropertyId = new global::System.Guid(0x8424b9c0, 0xde5b, 0x40fc, 0x82, 0x0f, 0x51, 0xcc, 0xef, 0x34, 0xe9, 0xff);
+		public static readonly global::System.Guid anchoDomainPropertyId = new global::System.Guid(0x47a4d61a, 0xcb44, 0x4ba2, 0x99, 0x87, 0x5b, 0x3b, 0x50, 0x3c, 0x31, 0xc7);
 		
 		/// <summary>
 		/// Storage for ancho
@@ -468,7 +522,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/ancho.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/ancho.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("8424b9c0-de5b-40fc-820f-51ccef34e9ff")]
+		[DslModeling::DomainObjectId("47a4d61a-cb44-4ba2-9987-5b3b503c31c7")]
 		public global::System.Int64 ancho
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -542,7 +596,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// alto domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid altoDomainPropertyId = new global::System.Guid(0x5b9fa845, 0xb9bf, 0x4a2a, 0xb5, 0x11, 0x5b, 0x99, 0xe2, 0xbc, 0xaf, 0xa7);
+		public static readonly global::System.Guid altoDomainPropertyId = new global::System.Guid(0xf92c1660, 0x32e1, 0x4032, 0x91, 0xf1, 0xe1, 0xcb, 0xd9, 0xe0, 0x17, 0x71);
 		
 		/// <summary>
 		/// Storage for alto
@@ -555,7 +609,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/alto.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Ventana/alto.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("5b9fa845-b9bf-4a2a-b511-5b99e2bcafa7")]
+		[DslModeling::DomainObjectId("f92c1660-32e1-4032-91f1-e1cbd9e01771")]
 		public global::System.Int64 alto
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -624,82 +678,124 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		#endregion
+		#region TieneBotons opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TieneBotons.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Boton> TieneBotons
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.VentanaDomainRoleId);
+			}
+		}
+		#endregion
+		#region TieneMenus opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TieneMenus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Menu> TieneMenus
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.VentanaDomainRoleId);
+			}
+		}
+		#endregion
+		#region Botons opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Botons.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Boton> Botons
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.VentanaDomainRoleId);
+			}
+		}
+		#endregion
+		#region ItemMenus opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ItemMenus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ItemMenu> ItemMenus
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemMenu>, ItemMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.VentanaDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.GVSJGGGASLProyectoIPS
+{
+	/// <summary>
+	/// DomainClass VentanaPrincipal
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("bdb18c2b-5b73-4372-bd61-23a59a253720")]
+	public partial class VentanaPrincipal : Ventana
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// VentanaPrincipal domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbdb18c2b, 0x5b73, 0x4372, 0xbd, 0x61, 0x23, 0xa5, 0x9a, 0x25, 0x37, 0x20);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaPrincipal(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaPrincipal(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.Ventana
+		/// Description for
+		/// UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.VentanaPrincipal
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.VentanaDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.VentanaPrincipalDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentana.VentanaDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ItemsMenu opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ItemsMenu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.Ventana
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ItemsMenu> ItemsMenu
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemsMenu>, ItemsMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.VentanaDomainRoleId);
-			}
-		}
-		#endregion
-		#region Boton1 opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Boton1.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.Ventana
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Boton> Boton1
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.VentanaDomainRoleId);
-			}
-		}
-		#endregion
-		#region Boton opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Boton.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.Ventana
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Boton> Boton
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.VentanaDomainRoleId);
-			}
-		}
-		#endregion
-		#region Menu opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Menu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.Ventana
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Menu> Menu
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.VentanaDomainRoleId);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaPrincipal.VentanaPrincipalDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -715,7 +811,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("9eb6e41f-3cfb-4516-bf5a-f746b10e6462")]
+	[DslModeling::DomainObjectId("f8275e25-6edf-434a-999e-e17adf1720a1")]
 	public partial class VentanaSecundaria : Ventana
 	{
 		#region Constructors, domain class Id
@@ -723,7 +819,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// VentanaSecundaria domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9eb6e41f, 0x3cfb, 0x4516, 0xbf, 0x5a, 0xf7, 0x46, 0xb1, 0x0e, 0x64, 0x62);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf8275e25, 0x6edf, 0x434a, 0x99, 0x9e, 0xe1, 0x7a, 0xdf, 0x17, 0x20, 0xa1);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -744,99 +840,12 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		{
 		}
 		#endregion
-		#region padrePid domain property code
-		
-		/// <summary>
-		/// padrePid domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid padrePidDomainPropertyId = new global::System.Guid(0x671162e2, 0xc6a3, 0x4e36, 0xa8, 0x0a, 0x03, 0x10, 0xb2, 0xc9, 0xe9, 0xa6);
-		
-		/// <summary>
-		/// Storage for padrePid
-		/// </summary>
-		private global::System.String padrePidPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of padrePid domain property.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria.Padre Pid
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/padrePid.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/padrePid.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("671162e2-c6a3-4e36-a80a-0310b2c9e9a6")]
-		public global::System.String padrePid
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return padrePidPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				padrePidPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the VentanaSecundaria.padrePid domain property.
-		/// </summary>
-		internal sealed partial class padrePidPropertyHandler : DslModeling::DomainPropertyValueHandler<VentanaSecundaria, global::System.String>
-		{
-			private padrePidPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the VentanaSecundaria.padrePid domain property value handler.
-			/// </summary>
-			public static readonly padrePidPropertyHandler Instance = new padrePidPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the VentanaSecundaria.padrePid domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return padrePidDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(VentanaSecundaria element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.padrePidPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(VentanaSecundaria element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.padrePidPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region modal domain property code
 		
 		/// <summary>
 		/// modal domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid modalDomainPropertyId = new global::System.Guid(0xd16b0840, 0x6240, 0x475b, 0xa3, 0xb1, 0x77, 0xe9, 0x9b, 0x6e, 0x49, 0xb6);
+		public static readonly global::System.Guid modalDomainPropertyId = new global::System.Guid(0xa5a694c7, 0x00e6, 0x44f0, 0x95, 0x02, 0x84, 0x29, 0x24, 0x8e, 0xa3, 0xd8);
 		
 		/// <summary>
 		/// Storage for modal
@@ -849,7 +858,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/modal.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/modal.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("d16b0840-6240-475b-a3b1-77e99b6e49b6")]
+		[DslModeling::DomainObjectId("a5a694c7-00e6-44f0-9502-8429248ea3d8")]
 		public global::System.Boolean modal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -918,141 +927,59 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		}
 		
 		#endregion
-	}
-}
-namespace UPM_IPS.GVSJGGGASLProyectoIPS
-{
-	/// <summary>
-	/// DomainClass VentanaPrincipal
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaPrincipal.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d7fec59c-0510-4c80-b6f4-16b264059561")]
-	public partial class VentanaPrincipal : Ventana
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// VentanaPrincipal domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd7fec59c, 0x0510, 0x4c80, 0xb6, 0xf4, 0x16, 0xb2, 0x64, 0x05, 0x95, 0x61);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public VentanaPrincipal(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
+		#region padre domain property code
 		
 		/// <summary>
-		/// Constructor
+		/// padre domain property Id.
 		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public VentanaPrincipal(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-	}
-}
-namespace UPM_IPS.GVSJGGGASLProyectoIPS
-{
-	/// <summary>
-	/// DomainClass Menu
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Menu
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d4c0b770-7358-4db8-a87f-3fd570611426")]
-	public partial class Menu : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// Menu domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd4c0b770, 0x7358, 0x4db8, 0xa8, 0x7f, 0x3f, 0xd5, 0x70, 0x61, 0x14, 0x26);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Menu(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
+		public static readonly global::System.Guid padreDomainPropertyId = new global::System.Guid(0x4dd326ff, 0x6793, 0x4d52, 0x89, 0x07, 0xd0, 0x32, 0x94, 0x26, 0x4f, 0x3e);
 		
 		/// <summary>
-		/// Constructor
+		/// Storage for padre
 		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Menu(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region titulo domain property code
+		private global::System.String padrePropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// titulo domain property Id.
+		/// Gets or sets the value of padre domain property.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria.Padre
 		/// </summary>
-		public static readonly global::System.Guid tituloDomainPropertyId = new global::System.Guid(0xa740b183, 0x6f73, 0x4d0a, 0x8d, 0x64, 0xcf, 0x94, 0x3f, 0x1f, 0x20, 0x36);
-		
-		/// <summary>
-		/// Storage for titulo
-		/// </summary>
-		private global::System.String tituloPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of titulo domain property.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Menu.Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu/titulo.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu/titulo.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("a740b183-6f73-4d0a-8d64-cf943f1f2036")]
-		public global::System.String titulo
+		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/padre.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.VentanaSecundaria/padre.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("4dd326ff-6793-4d52-8907-d03294264f3e")]
+		public global::System.String padre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return tituloPropertyStorage;
+				return padrePropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				tituloPropertyHandler.Instance.SetValue(this, value);
+				padrePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Menu.titulo domain property.
+		/// Value handler for the VentanaSecundaria.padre domain property.
 		/// </summary>
-		internal sealed partial class tituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Menu, global::System.String>
+		internal sealed partial class padrePropertyHandler : DslModeling::DomainPropertyValueHandler<VentanaSecundaria, global::System.String>
 		{
-			private tituloPropertyHandler() { }
+			private padrePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Menu.titulo domain property value handler.
+			/// Gets the singleton instance of the VentanaSecundaria.padre domain property value handler.
 			/// </summary>
-			public static readonly tituloPropertyHandler Instance = new tituloPropertyHandler();
+			public static readonly padrePropertyHandler Instance = new padrePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Menu.titulo domain property.
+			/// Gets the Id of the VentanaSecundaria.padre domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return tituloDomainPropertyId;
+					return padreDomainPropertyId;
 				}
 			}
 			
@@ -1061,10 +988,10 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Menu element)
+			public override sealed global::System.String GetValue(VentanaSecundaria element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tituloPropertyStorage;
+				return element.padrePropertyStorage;
 			}
 		
 			/// <summary>
@@ -1072,7 +999,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Menu element, global::System.String newValue)
+			public override sealed void SetValue(VentanaSecundaria element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -1080,7 +1007,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.tituloPropertyStorage = newValue;
+					element.padrePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1090,241 +1017,20 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.Menu
+		/// Description for
+		/// UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.VentanaSecundaria
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.MenuDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.VentanaSecundariaDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenu.MenuDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ItemsMenu opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ItemsMenu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.Menu
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ItemsMenu> ItemsMenu
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemsMenu>, ItemsMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.MenuDomainRoleId);
-			}
-		}
-		#endregion
-		#region Ventana opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Ventana.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.Menu
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventana
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.MenuDomainRoleId);
-			}
-		}
-		#endregion
-	}
-}
-namespace UPM_IPS.GVSJGGGASLProyectoIPS
-{
-	/// <summary>
-	/// DomainClass ItemsMenu
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("b6096013-5613-4d7b-896f-3bf270cc7e23")]
-	public partial class ItemsMenu : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// ItemsMenu domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb6096013, 0x5613, 0x4d7b, 0x89, 0x6f, 0x3b, 0xf2, 0x70, 0xcc, 0x7e, 0x23);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ItemsMenu(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ItemsMenu(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region titulo domain property code
-		
-		/// <summary>
-		/// titulo domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid tituloDomainPropertyId = new global::System.Guid(0x6bd3db7e, 0x8ce3, 0x482a, 0x80, 0x37, 0x55, 0xda, 0x6a, 0xa0, 0x88, 0x77);
-		
-		/// <summary>
-		/// Storage for titulo
-		/// </summary>
-		private global::System.String tituloPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of titulo domain property.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu.Titulo
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu/titulo.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu/titulo.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("6bd3db7e-8ce3-482a-8037-55da6aa08877")]
-		public global::System.String titulo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tituloPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				tituloPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ItemsMenu.titulo domain property.
-		/// </summary>
-		internal sealed partial class tituloPropertyHandler : DslModeling::DomainPropertyValueHandler<ItemsMenu, global::System.String>
-		{
-			private tituloPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ItemsMenu.titulo domain property value handler.
-			/// </summary>
-			public static readonly tituloPropertyHandler Instance = new tituloPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ItemsMenu.titulo domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return tituloDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ItemsMenu element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tituloPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ItemsMenu element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.tituloPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region EstadoDeFin opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of EstadoDeFin.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.ItemsMenu
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstadoDeFin> EstadoDeFin
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstadoDeFin>, EstadoDeFin>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.ItemsMenuDomainRoleId);
-			}
-		}
-		#endregion
-		#region Ventana opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Ventana.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.ItemsMenu
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventana
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.ItemsMenuDomainRoleId);
-			}
-		}
-		#endregion
-		#region Tapiz opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.ItemsMenu
-		/// </summary>
-		public virtual Tapiz Tapiz
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.ItemsMenuDomainRoleId) as Tapiz;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemsMenu.ItemsMenuDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region Menu opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Menu.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.ItemsMenu
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Menu> Menu
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.ItemsMenuDomainRoleId);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasVentanaSecundarium.VentanaSecundariaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1340,7 +1046,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Boton.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d64e5205-1c13-4f1f-bcfc-c13723dc9baf")]
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (nombre = {nombrePropertyStorage})")]
+	[DslModeling::DomainObjectId("31637824-1e87-4346-8719-c6cf09ec31b4")]
 	public partial class Boton : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
@@ -1348,7 +1055,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// <summary>
 		/// Boton domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd64e5205, 0x1c13, 0x4f1f, 0xbc, 0xfc, 0xc1, 0x37, 0x23, 0xdc, 0x9b, 0xaf);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x31637824, 0x1e87, 0x4346, 0x87, 0x19, 0xc6, 0xcf, 0x09, 0xec, 0x31, 0xb4);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -1369,59 +1076,60 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		{
 		}
 		#endregion
-		#region titulo domain property code
+		#region nombre domain property code
 		
 		/// <summary>
-		/// titulo domain property Id.
+		/// nombre domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid tituloDomainPropertyId = new global::System.Guid(0x8557b3ae, 0xb238, 0x4015, 0xae, 0x1f, 0x73, 0x9e, 0x58, 0x21, 0x53, 0xb3);
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x85ffc0a7, 0x2d21, 0x4beb, 0xb1, 0x6a, 0x89, 0x28, 0x83, 0x3f, 0x57, 0x4b);
 		
 		/// <summary>
-		/// Storage for titulo
+		/// Storage for nombre
 		/// </summary>
-		private global::System.String tituloPropertyStorage = string.Empty;
+		private global::System.String nombrePropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of titulo domain property.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton.Titulo
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton.Nombre
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Boton/titulo.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Boton/titulo.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("8557b3ae-b238-4015-ae1f-739e582153b3")]
-		public global::System.String titulo
+		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Boton/nombre.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Boton/nombre.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("85ffc0a7-2d21-4beb-b16a-8928833f574b")]
+		public global::System.String nombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return tituloPropertyStorage;
+				return nombrePropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				tituloPropertyHandler.Instance.SetValue(this, value);
+				nombrePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Boton.titulo domain property.
+		/// Value handler for the Boton.nombre domain property.
 		/// </summary>
-		internal sealed partial class tituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Boton, global::System.String>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Boton, global::System.String>
 		{
-			private tituloPropertyHandler() { }
+			private nombrePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Boton.titulo domain property value handler.
+			/// Gets the singleton instance of the Boton.nombre domain property value handler.
 			/// </summary>
-			public static readonly tituloPropertyHandler Instance = new tituloPropertyHandler();
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Boton.titulo domain property.
+			/// Gets the Id of the Boton.nombre domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return tituloDomainPropertyId;
+					return nombreDomainPropertyId;
 				}
 			}
 			
@@ -1433,7 +1141,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			public override sealed global::System.String GetValue(Boton element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tituloPropertyStorage;
+				return element.nombrePropertyStorage;
 			}
 		
 			/// <summary>
@@ -1449,74 +1157,86 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.tituloPropertyStorage = newValue;
+					element.nombrePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region EstadoDeFin opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of EstadoDeFin.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.Boton
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstadoDeFin> EstadoDeFin
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstadoDeFin>, EstadoDeFin>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.BotonDomainRoleId);
-			}
-		}
-		#endregion
-		#region Ventana1 opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Ventana1.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.Boton
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventana1
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.BotonDomainRoleId);
-			}
-		}
-		#endregion
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.Boton
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.Boton
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.BotonDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.BotonDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBoton.BotonDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasBotons.BotonDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region Ventana opposite domain role accessor
-		
+		#region InVentana opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Ventana.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.Boton
+		/// Gets or sets InVentana.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.Boton
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventana
+		public virtual Ventana InVentana
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.BotonDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.BotonDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.BotonDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region EstadoFin opposite domain role accessor
+		/// <summary>
+		/// Gets or sets EstadoFin.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.Boton
+		/// </summary>
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.BotonDomainRoleId) as EstadoFin;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.BotonDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region VentanaDestino opposite domain role accessor
+		/// <summary>
+		/// Gets or sets VentanaDestino.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.Boton
+		/// </summary>
+		public virtual Ventana VentanaDestino
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.BotonDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.BotonDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1525,28 +1245,29 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 namespace UPM_IPS.GVSJGGGASLProyectoIPS
 {
 	/// <summary>
-	/// DomainClass EstadoDeFin
-	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin
+	/// DomainClass Menu
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Menu
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("bc8172ea-453e-49e2-a64e-625c3a5dabd1")]
-	public partial class EstadoDeFin : DslModeling::ModelElement
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (nombre = {nombrePropertyStorage})")]
+	[DslModeling::DomainObjectId("01cbf14d-c57e-483e-8812-0b69bdeb366c")]
+	public partial class Menu : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// EstadoDeFin domain class Id.
+		/// Menu domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbc8172ea, 0x453e, 0x49e2, 0xa6, 0x4e, 0x62, 0x5c, 0x3a, 0x5d, 0xab, 0xd1);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x01cbf14d, 0xc57e, 0x483e, 0x88, 0x12, 0x0b, 0x69, 0xbd, 0xeb, 0x36, 0x6c);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EstadoDeFin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Menu(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1556,59 +1277,445 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EstadoDeFin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Menu(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
 		#endregion
-		#region Boton opposite domain role accessor
+		#region nombre domain property code
 		
 		/// <summary>
-		/// Gets a list of Boton.
-		/// Description for
-		/// UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.EstadoDeFin
+		/// nombre domain property Id.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Boton> Boton
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x76503542, 0x6f45, 0x44b7, 0xa6, 0xa0, 0x69, 0x5f, 0x63, 0x0f, 0xa5, 0xb3);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Menu.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu/nombre.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.Menu/nombre.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("76503542-6f45-44b7-a6a0-695f630fa5b3")]
+		public global::System.String nombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.EstadoDeFinDomainRoleId);
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
 			}
 		}
+		/// <summary>
+		/// Value handler for the Menu.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Menu, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Menu.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Menu.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Menu element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Menu element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 		#region Tapiz opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Tapiz.
-		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.EstadoDeFin
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.Menu
 		/// </summary>
 		public virtual Tapiz Tapiz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.EstadoDeFinDomainRoleId) as Tapiz;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.MenuDomainRoleId) as Tapiz;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoDeFin.EstadoDeFinDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasMenus.MenuDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region ItemsMenu opposite domain role accessor
-		
+		#region InVentana opposite domain role accessor
 		/// <summary>
-		/// Gets a list of ItemsMenu.
-		/// Description for
-		/// UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.EstadoDeFin
+		/// Gets or sets InVentana.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.Menu
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ItemsMenu> ItemsMenu
+		public virtual Ventana InVentana
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemsMenu>, ItemsMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.EstadoDeFinDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.MenuDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.MenuDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ItemMenus opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ItemMenus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.Menu
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ItemMenu> ItemMenus
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemMenu>, ItemMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.MenuDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.GVSJGGGASLProyectoIPS
+{
+	/// <summary>
+	/// DomainClass ItemMenu
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (nombre = {nombrePropertyStorage})")]
+	[DslModeling::DomainObjectId("ff411900-7498-4226-8f6e-1e4ee8e0aa87")]
+	public partial class ItemMenu : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ItemMenu domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xff411900, 0x7498, 0x4226, 0x8f, 0x6e, 0x1e, 0x4e, 0xe8, 0xe0, 0xaa, 0x87);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ItemMenu(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ItemMenu(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0xbb6ef8e2, 0xc453, 0x434f, 0x9b, 0x12, 0xf8, 0xad, 0x1f, 0x50, 0x92, 0xd9);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu/nombre.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu/nombre.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("bb6ef8e2-c453-434f-9b12-f8ad1f5092d9")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ItemMenu.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ItemMenu, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ItemMenu.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ItemMenu.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ItemMenu element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ItemMenu element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Tapiz opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Tapiz.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.ItemMenu
+		/// </summary>
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.ItemMenuDomainRoleId) as Tapiz;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasItemMenus.ItemMenuDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Menu opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Menu.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.ItemMenu
+		/// </summary>
+		public virtual Menu Menu
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.ItemMenuDomainRoleId) as Menu;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.ItemMenuDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region EstadoFin opposite domain role accessor
+		/// <summary>
+		/// Gets or sets EstadoFin.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.ItemMenu
+		/// </summary>
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.ItemMenuDomainRoleId) as EstadoFin;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.ItemMenuDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region VentanaDestino opposite domain role accessor
+		/// <summary>
+		/// Gets or sets VentanaDestino.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.ItemMenu
+		/// </summary>
+		public virtual Ventana VentanaDestino
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.ItemMenuDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.ItemMenuDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.GVSJGGGASLProyectoIPS
+{
+	/// <summary>
+	/// DomainClass EstadoFin
+	/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin.DisplayName", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin.Description", typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel), "UPM_IPS.GVSJGGGASLProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.GVSJGGGASLProyectoIPS.GVSJGGGASLProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("625565ea-1896-4be4-8a49-7963cc34f3a4")]
+	public partial class EstadoFin : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// EstadoFin domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x625565ea, 0x1896, 0x4be4, 0x8a, 0x49, 0x79, 0x63, 0xcc, 0x34, 0xf3, 0xa4);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstadoFin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstadoFin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tapiz opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Tapiz.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.EstadoFin
+		/// </summary>
+		public virtual Tapiz Tapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.EstadoFinDomainRoleId) as Tapiz;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.GVSJGGGASLProyectoIPS.TapizHasEstadoFinned.EstadoFinDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Botons opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Botons.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.EstadoFin
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Boton> Botons
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Boton>, Boton>(global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.EstadoFinDomainRoleId);
+			}
+		}
+		#endregion
+		#region ItemMenus opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ItemMenus.
+		/// Description for UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.EstadoFin
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ItemMenu> ItemMenus
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemMenu>, ItemMenu>(global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.EstadoFinDomainRoleId);
 			}
 		}
 		#endregion

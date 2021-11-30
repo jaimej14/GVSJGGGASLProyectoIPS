@@ -15,657 +15,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class RelacionDeFinalizacionBBuilder
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-				{
-					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)candidateSource;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin targetEstadoDeFin = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)candidateTarget;
-						if(targetEstadoDeFin == null || sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB.GetLinks(sourceBoton, targetEstadoDeFin).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-				{
-					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)source;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionB(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class RelacionDeFinalizacionMBuilder
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-				{
-					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceItemsMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)candidateSource;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin targetEstadoDeFin = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)candidateTarget;
-						if(targetEstadoDeFin == null || sourceItemsMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM.GetLinks(sourceItemsMenu, targetEstadoDeFin).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-				{
-					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)source;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoDeFin)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeFinalizacionM(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class RelacionDeAccionMBuilder
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-				{
-					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceItemsMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)candidateSource;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateTarget;
-						if(targetVentana == null || sourceItemsMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM.GetLinks(sourceItemsMenu, targetVentana).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-				{
-					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)source;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionM(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class RelacionDeAccionBBuilder
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-				{
-					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)candidateSource;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateTarget;
-						if(targetVentana == null || sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB.GetLinks(sourceBoton, targetVentana).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
-				{
-					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)source;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.RelacionDeAccionB(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class MenuReferencesItemsMenuBuilder
-	{
-		#region Accept Connection Methods
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the source of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-
-		/// <summary>
-		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
-		/// </summary>
-		/// <param name="candidate">The model element to test.</param>
-		/// <returns>Whether the element can be used as the target of a connection.</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
-		{
-			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-			{ 
-				return true;
-			}
-			else
-				return false;
-		}
-		
-		/// <summary>
-		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
-		/// </summary>
-		/// <param name="candidateSource">The model element to test as a source</param>
-		/// <param name="candidateTarget">The model element to test as a target</param>
-		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
-		{
-			// Accepts null, null; source, null; source, target but NOT null, target
-			if (candidateSource == null)
-			{
-				if (candidateTarget != null)
-				{
-					throw new global::System.ArgumentNullException("candidateSource");
-				}
-				else // Both null
-				{
-					return false;
-				}
-			}
-			bool acceptSource = CanAcceptSource(candidateSource);
-			// If the source wasn't accepted then there's no point checking targets.
-			// If there is no target then the source controls the accept.
-			if (!acceptSource || candidateTarget == null)
-			{
-				return acceptSource;
-			}
-			else // Check combinations
-			{
-				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
-				{
-					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)candidateSource;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu targetItemsMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)candidateTarget;
-						if(targetItemsMenu == null || sourceMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu.GetLinks(sourceMenu, targetItemsMenu).Count > 0) return false;
-						return true;
-					}
-				}
-				
-			}
-			return false;
-		}
-		#endregion
-
-		#region Connection Methods
-		/// <summary>
-		/// Make a connection between the given pair of source and target elements
-		/// </summary>
-		/// <param name="source">The model element to use as the source of the connection</param>
-		/// <param name="target">The model element to use as the target of the connection</param>
-		/// <returns>A link representing the created connection</returns>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
-		{
-			if (source == null)
-			{
-				throw new global::System.ArgumentNullException("source");
-			}
-			if (target == null)
-			{
-				throw new global::System.ArgumentNullException("target");
-			}
-			
-			if (CanAcceptSourceAndTarget(source, target))
-			{
-				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
-				{
-					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)
-					{
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)source;
-						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemsMenu)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuReferencesItemsMenu(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
-				
-			}
-			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
-			throw new global::System.InvalidOperationException();
-		}
-		#endregion
- 	}
-	/// <summary>
-	/// ConnectionBuilder class to provide logic for constructing connections between elements.
-	/// </summary>
-	public static partial class VentanaReferencesBotonBuilder
+	public static partial class VentanaTieneBotonsBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -739,7 +89,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					{
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateSource;
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton targetBoton = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)candidateTarget;
-						if(targetBoton == null || sourceVentana == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton.GetLinks(sourceVentana, targetBoton).Count > 0) return false;
+						if(targetBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.GetLinkToInVentana(targetBoton) != null) return false;
+						if(targetBoton == null || sourceVentana == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons.GetLinks(sourceVentana, targetBoton).Count > 0) return false;
 						return true;
 					}
 				}
@@ -777,7 +128,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					{
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)source;
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesBoton(sourceAccepted, targetAccepted);
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneBotons(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -795,7 +146,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class VentanaReferencesMenuBuilder
+	public static partial class VentanaTieneMenusBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -869,7 +220,8 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					{
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateSource;
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu targetMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)candidateTarget;
-						if(targetMenu == null || sourceVentana == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu.GetLinks(sourceVentana, targetMenu).Count > 0) return false;
+						if(targetMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.GetLinkToInVentana(targetMenu) != null) return false;
+						if(targetMenu == null || sourceVentana == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus.GetLinks(sourceVentana, targetMenu).Count > 0) return false;
 						return true;
 					}
 				}
@@ -907,7 +259,662 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 					{
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)source;
 						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaReferencesMenu(sourceAccepted, targetAccepted);
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.VentanaTieneMenus(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class Boton_FinBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+				{
+					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)candidateSource;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin targetEstadoFin = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)candidateTarget;
+						if(sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.GetLinkToEstadoFin(sourceBoton) != null) return false;
+						if(targetEstadoFin == null || sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin.GetLinks(sourceBoton, targetEstadoFin).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+				{
+					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)source;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Fin(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class Boton_VentanaBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+				{
+					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceBoton = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)candidateSource;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateTarget;
+						if(sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.GetLinkToVentanaDestino(sourceBoton) != null) return false;
+						if(targetVentana == null || sourceBoton == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana.GetLinks(sourceBoton, targetVentana).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)
+				{
+					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton)source;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.Boton_Ventana(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class MenuTieneItemsMenuBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
+				{
+					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)candidateSource;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu targetItemMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)candidateTarget;
+						if(targetItemMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.GetLinkToMenu(targetItemMenu) != null) return false;
+						if(targetItemMenu == null || sourceMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu.GetLinks(sourceMenu, targetItemMenu).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)
+				{
+					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Menu)source;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.MenuTieneItemsMenu(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ItemMenu_EstadoFinBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+				{
+					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceItemMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)candidateSource;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin targetEstadoFin = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)candidateTarget;
+						if(sourceItemMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.GetLinkToEstadoFin(sourceItemMenu) != null) return false;
+						if(targetEstadoFin == null || sourceItemMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin.GetLinks(sourceItemMenu, targetEstadoFin).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+				{
+					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)source;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.EstadoFin)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_EstadoFin(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ItemMenu_VentanaBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+				{
+					if (candidateTarget is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceItemMenu = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)candidateSource;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetVentana = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)candidateTarget;
+						if(sourceItemMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.GetLinkToVentanaDestino(sourceItemMenu) != null) return false;
+						if(targetVentana == null || sourceItemMenu == null || global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana.GetLinks(sourceItemMenu, targetVentana).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)
+				{
+					if (target is global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)
+					{
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu sourceAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu)source;
+						global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana targetAccepted = (global::UPM_IPS.GVSJGGGASLProyectoIPS.Ventana)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.GVSJGGGASLProyectoIPS.ItemMenu_Ventana(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -926,14 +933,14 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class VN_BTtConnectAction : DslDiagrams::ConnectAction
+	internal partial class VentanaTieneBotonsToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new VN_BTtConnectAction for the given Diagram.
+		/// Constructs a new VentanaTieneBotonsToolConnectAction for the given Diagram.
 		/// </summary>
-		public VN_BTtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public VentanaTieneBotonsToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -963,24 +970,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the VN_BTtConnectionType associated with this action.
+		/// Returns the VentanaTieneBotonsToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VN_BTtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VentanaTieneBotonsToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class VN_BTtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class VentanaTieneBotonsToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the VN_BTtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the VentanaTieneBotonsToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected VN_BTtConnectionTypeBase() : base() {}
+			protected VentanaTieneBotonsToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1000,7 +1007,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VentanaReferencesBotonBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder VentanaTieneBotonsBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1026,11 +1033,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return VentanaReferencesBotonBuilder.CanAcceptSource(sourceElement);
+						return VentanaTieneBotonsBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return VentanaReferencesBotonBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return VentanaTieneBotonsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1055,7 +1062,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VentanaReferencesBotonBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder VentanaTieneBotonsBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1069,30 +1076,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				VentanaReferencesBotonBuilder.Connect(sourceElement, targetElement);
+				VentanaTieneBotonsBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class VN_BTtConnectionType : VN_BTtConnectionTypeBase
+		private partial class VentanaTieneBotonsToolConnectionType : VentanaTieneBotonsToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the VN_BTtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the VentanaTieneBotonsToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public VN_BTtConnectionType() : base() {}
+			public VentanaTieneBotonsToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class VN_MNtConnectAction : DslDiagrams::ConnectAction
+	internal partial class VentanaTieneMenusToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new VN_MNtConnectAction for the given Diagram.
+		/// Constructs a new VentanaTieneMenusToolConnectAction for the given Diagram.
 		/// </summary>
-		public VN_MNtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public VentanaTieneMenusToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1122,24 +1129,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the VN_MNtConnectionType associated with this action.
+		/// Returns the VentanaTieneMenusToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VN_MNtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VentanaTieneMenusToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class VN_MNtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class VentanaTieneMenusToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the VN_MNtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the VentanaTieneMenusToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected VN_MNtConnectionTypeBase() : base() {}
+			protected VentanaTieneMenusToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1159,7 +1166,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VentanaReferencesMenuBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder VentanaTieneMenusBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1185,11 +1192,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return VentanaReferencesMenuBuilder.CanAcceptSource(sourceElement);
+						return VentanaTieneMenusBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return VentanaReferencesMenuBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return VentanaTieneMenusBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1214,7 +1221,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VentanaReferencesMenuBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder VentanaTieneMenusBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1228,30 +1235,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				VentanaReferencesMenuBuilder.Connect(sourceElement, targetElement);
+				VentanaTieneMenusBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class VN_MNtConnectionType : VN_MNtConnectionTypeBase
+		private partial class VentanaTieneMenusToolConnectionType : VentanaTieneMenusToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the VN_MNtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the VentanaTieneMenusToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public VN_MNtConnectionType() : base() {}
+			public VentanaTieneMenusToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class BT_EFtConnectAction : DslDiagrams::ConnectAction
+	internal partial class Boton_FinToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new BT_EFtConnectAction for the given Diagram.
+		/// Constructs a new Boton_FinToolConnectAction for the given Diagram.
 		/// </summary>
-		public BT_EFtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public Boton_FinToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1281,24 +1288,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the BT_EFtConnectionType associated with this action.
+		/// Returns the Boton_FinToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new BT_EFtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new Boton_FinToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class BT_EFtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class Boton_FinToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the BT_EFtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the Boton_FinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected BT_EFtConnectionTypeBase() : base() {}
+			protected Boton_FinToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1318,7 +1325,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeFinalizacionBBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder Boton_FinBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1344,11 +1351,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionDeFinalizacionBBuilder.CanAcceptSource(sourceElement);
+						return Boton_FinBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionDeFinalizacionBBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return Boton_FinBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1373,7 +1380,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeFinalizacionBBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder Boton_FinBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1387,30 +1394,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionDeFinalizacionBBuilder.Connect(sourceElement, targetElement);
+				Boton_FinBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class BT_EFtConnectionType : BT_EFtConnectionTypeBase
+		private partial class Boton_FinToolConnectionType : Boton_FinToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the BT_EFtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the Boton_FinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public BT_EFtConnectionType() : base() {}
+			public Boton_FinToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class AccionBotontConnectAction : DslDiagrams::ConnectAction
+	internal partial class Boton_VentanaToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new AccionBotontConnectAction for the given Diagram.
+		/// Constructs a new Boton_VentanaToolConnectAction for the given Diagram.
 		/// </summary>
-		public AccionBotontConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public Boton_VentanaToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1440,24 +1447,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the AccionBotontConnectionType associated with this action.
+		/// Returns the Boton_VentanaToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccionBotontConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new Boton_VentanaToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class AccionBotontConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class Boton_VentanaToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the AccionBotontConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the Boton_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected AccionBotontConnectionTypeBase() : base() {}
+			protected Boton_VentanaToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1477,7 +1484,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeAccionBBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder Boton_VentanaBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1503,11 +1510,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionDeAccionBBuilder.CanAcceptSource(sourceElement);
+						return Boton_VentanaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionDeAccionBBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return Boton_VentanaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1532,7 +1539,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeAccionBBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder Boton_VentanaBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1546,30 +1553,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionDeAccionBBuilder.Connect(sourceElement, targetElement);
+				Boton_VentanaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class AccionBotontConnectionType : AccionBotontConnectionTypeBase
+		private partial class Boton_VentanaToolConnectionType : Boton_VentanaToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the AccionBotontConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the Boton_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public AccionBotontConnectionType() : base() {}
+			public Boton_VentanaToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class MN_IMtConnectAction : DslDiagrams::ConnectAction
+	internal partial class MenuTieneItemsMenuToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new MN_IMtConnectAction for the given Diagram.
+		/// Constructs a new MenuTieneItemsMenuToolConnectAction for the given Diagram.
 		/// </summary>
-		public MN_IMtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public MenuTieneItemsMenuToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1599,24 +1606,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the MN_IMtConnectionType associated with this action.
+		/// Returns the MenuTieneItemsMenuToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new MN_IMtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new MenuTieneItemsMenuToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class MN_IMtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class MenuTieneItemsMenuToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the MN_IMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the MenuTieneItemsMenuToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected MN_IMtConnectionTypeBase() : base() {}
+			protected MenuTieneItemsMenuToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1636,7 +1643,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder MenuReferencesItemsMenuBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder MenuTieneItemsMenuBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1662,11 +1669,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return MenuReferencesItemsMenuBuilder.CanAcceptSource(sourceElement);
+						return MenuTieneItemsMenuBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return MenuReferencesItemsMenuBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return MenuTieneItemsMenuBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1691,7 +1698,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder MenuReferencesItemsMenuBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder MenuTieneItemsMenuBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1705,30 +1712,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				MenuReferencesItemsMenuBuilder.Connect(sourceElement, targetElement);
+				MenuTieneItemsMenuBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class MN_IMtConnectionType : MN_IMtConnectionTypeBase
+		private partial class MenuTieneItemsMenuToolConnectionType : MenuTieneItemsMenuToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the MN_IMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the MenuTieneItemsMenuToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public MN_IMtConnectionType() : base() {}
+			public MenuTieneItemsMenuToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class FinalizacionMtConnectAction : DslDiagrams::ConnectAction
+	internal partial class ItemMenu_EstadoFinToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new FinalizacionMtConnectAction for the given Diagram.
+		/// Constructs a new ItemMenu_EstadoFinToolConnectAction for the given Diagram.
 		/// </summary>
-		public FinalizacionMtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public ItemMenu_EstadoFinToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1758,24 +1765,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the FinalizacionMtConnectionType associated with this action.
+		/// Returns the ItemMenu_EstadoFinToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new FinalizacionMtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemMenu_EstadoFinToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class FinalizacionMtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class ItemMenu_EstadoFinToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the FinalizacionMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemMenu_EstadoFinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected FinalizacionMtConnectionTypeBase() : base() {}
+			protected ItemMenu_EstadoFinToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1795,7 +1802,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeFinalizacionMBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemMenu_EstadoFinBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1821,11 +1828,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionDeFinalizacionMBuilder.CanAcceptSource(sourceElement);
+						return ItemMenu_EstadoFinBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionDeFinalizacionMBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ItemMenu_EstadoFinBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -1850,7 +1857,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeFinalizacionMBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemMenu_EstadoFinBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -1864,30 +1871,30 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionDeFinalizacionMBuilder.Connect(sourceElement, targetElement);
+				ItemMenu_EstadoFinBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class FinalizacionMtConnectionType : FinalizacionMtConnectionTypeBase
+		private partial class ItemMenu_EstadoFinToolConnectionType : ItemMenu_EstadoFinToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the FinalizacionMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemMenu_EstadoFinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public FinalizacionMtConnectionType() : base() {}
+			public ItemMenu_EstadoFinToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class AccionMtConnectAction : DslDiagrams::ConnectAction
+	internal partial class ItemMenu_VentanaToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new AccionMtConnectAction for the given Diagram.
+		/// Constructs a new ItemMenu_VentanaToolConnectAction for the given Diagram.
 		/// </summary>
-		public AccionMtConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public ItemMenu_VentanaToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -1917,24 +1924,24 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the AccionMtConnectionType associated with this action.
+		/// Returns the ItemMenu_VentanaToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AccionMtConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemMenu_VentanaToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class AccionMtConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class ItemMenu_VentanaToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the AccionMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemMenu_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected AccionMtConnectionTypeBase() : base() {}
+			protected ItemMenu_VentanaToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -1954,7 +1961,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeAccionMBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemMenu_VentanaBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -1980,11 +1987,11 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				{				
 					if(targetShapeElement == null)
 					{
-						return RelacionDeAccionMBuilder.CanAcceptSource(sourceElement);
+						return ItemMenu_VentanaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return RelacionDeAccionMBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ItemMenu_VentanaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -2009,7 +2016,7 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder RelacionDeAccionMBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemMenu_VentanaBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -2023,16 +2030,16 @@ namespace UPM_IPS.GVSJGGGASLProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				RelacionDeAccionMBuilder.Connect(sourceElement, targetElement);
+				ItemMenu_VentanaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class AccionMtConnectionType : AccionMtConnectionTypeBase
+		private partial class ItemMenu_VentanaToolConnectionType : ItemMenu_VentanaToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the AccionMtConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemMenu_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public AccionMtConnectionType() : base() {}
+			public ItemMenu_VentanaToolConnectionType() : base() {}
 		}
 	}
 }
