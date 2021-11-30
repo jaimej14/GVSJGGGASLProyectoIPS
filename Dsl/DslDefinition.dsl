@@ -740,6 +740,14 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaSecundaria/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaVentanaSecundaria" />
       </ShapeMap>
       <ShapeMap>
@@ -770,6 +778,14 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaBoton/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Menu/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaMenu" />
       </ShapeMap>
       <ShapeMap>
@@ -779,6 +795,14 @@
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="MetaforaItemMenu/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ItemMenu/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaBoton/nombreDec" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ItemMenu/nombre" />
