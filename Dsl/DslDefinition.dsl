@@ -878,25 +878,25 @@
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Conectores">
-      <ConnectionTool Name="VentanaTieneBotonsTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="VentanaTieneBotonsTool" Tooltip="Ventana Tiene Botons Tool" HelpKeyword="VentanaTieneBotonsTool">
+      <ConnectionTool Name="VentanaTieneBotonsTool" ToolboxIcon="Resources\VentanaTieneBotons.bmp" Caption="VentanaTieneBotonsTool" Tooltip="Ventana Tiene Botons Tool" HelpKeyword="VentanaTieneBotonsTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaTieneBotonsBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="VentanaTieneMenusTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="VentanaTieneMenusTool" Tooltip="Ventana Tiene Menus Tool" HelpKeyword="VentanaTieneMenusTool">
+      <ConnectionTool Name="VentanaTieneMenusTool" ToolboxIcon="Resources\VentanaTieneMenus.bmp" Caption="VentanaTieneMenusTool" Tooltip="Ventana Tiene Menus Tool" HelpKeyword="VentanaTieneMenusTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaTieneMenusBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="Boton_FinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Boton_FinTool" Tooltip="Boton_ Fin Tool" HelpKeyword="Boton_FinTool">
+      <ConnectionTool Name="Boton_FinTool" ToolboxIcon="Resources\IrFin.bmp" Caption="Boton_FinTool" Tooltip="Boton_ Fin Tool" HelpKeyword="Boton_FinTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/Boton_FinBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="Boton_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Boton_VentanaTool" Tooltip="Boton_ Ventana Tool" HelpKeyword="Boton_VentanaTool">
+      <ConnectionTool Name="Boton_VentanaTool" ToolboxIcon="Resources\IrVentana.bmp" Caption="Boton_VentanaTool" Tooltip="Boton_ Ventana Tool" HelpKeyword="Boton_VentanaTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/Boton_VentanaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="MenuTieneItemsMenuTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="MenuTieneItemsMenuTool" Tooltip="Menu Tiene Items Menu Tool" HelpKeyword="MenuTieneItemsMenuTool">
+      <ConnectionTool Name="MenuTieneItemsMenuTool" ToolboxIcon="Resources\MenuTieneItemsMenu.bmp" Caption="MenuTieneItemsMenuTool" Tooltip="Menu Tiene Items Menu Tool" HelpKeyword="MenuTieneItemsMenuTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/MenuTieneItemsMenuBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="ItemMenu_EstadoFinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemMenu_EstadoFinTool" Tooltip="Item Menu_ Estado Fin Tool" HelpKeyword="ItemMenu_EstadoFinTool">
+      <ConnectionTool Name="ItemMenu_EstadoFinTool" ToolboxIcon="Resources\IrFin.bmp" Caption="ItemMenu_EstadoFinTool" Tooltip="Item Menu_ Estado Fin Tool" HelpKeyword="ItemMenu_EstadoFinTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/ItemMenu_EstadoFinBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="ItemMenu_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemMenu_VentanaTool" Tooltip="Item Menu_ Ventana Tool" HelpKeyword="ItemMenu_VentanaTool">
+      <ConnectionTool Name="ItemMenu_VentanaTool" ToolboxIcon="Resources\IrVentana.bmp" Caption="ItemMenu_VentanaTool" Tooltip="Item Menu_ Ventana Tool" HelpKeyword="ItemMenu_VentanaTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/ItemMenu_VentanaBuilder" />
       </ConnectionTool>
     </ToolboxTab>
