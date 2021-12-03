@@ -858,22 +858,22 @@
       <XmlSerializationBehaviorMoniker Name="GVSJGGGASLProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Elementos">
-      <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalTool" Tooltip="Ventana Principal Tool" HelpKeyword="VentanaPrincipalTool">
+      <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\VentanaPrincipal.bmp" Caption="VentanaPrincipalTool" Tooltip="Ventana Principal Tool" HelpKeyword="VentanaPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VentanaSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaSecundariaTool" Tooltip="Ventana Secundaria Tool" HelpKeyword="VentanaSecundariaTool">
+      <ElementTool Name="VentanaSecundariaTool" ToolboxIcon="Resources\VentanaSecundaria.bmp" Caption="VentanaSecundariaTool" Tooltip="Ventana Secundaria Tool" HelpKeyword="VentanaSecundariaTool">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
-      <ElementTool Name="BotonTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+      <ElementTool Name="BotonTool" ToolboxIcon="Resources\Boton.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
-      <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="MenuTool" Tooltip="Menu Tool" HelpKeyword="MenuTool">
+      <ElementTool Name="MenuTool" ToolboxIcon="Resources\Menu.bmp" Caption="MenuTool" Tooltip="Menu Tool" HelpKeyword="MenuTool">
         <DomainClassMoniker Name="Menu" />
       </ElementTool>
-      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ItemMenu.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
         <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
-      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="EstadoFinTool" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
+      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\EstadoFinal.bmp" Caption="EstadoFinTool" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
         <DomainClassMoniker Name="EstadoFin" />
       </ElementTool>
     </ToolboxTab>
