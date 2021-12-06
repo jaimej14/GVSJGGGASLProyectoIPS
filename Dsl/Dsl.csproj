@@ -159,11 +159,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\IrFin.bmp" />
-    <Content Include="Resources\MenuTieneItemsMenu.bmp" />
-    <Content Include="Resources\VentanaSecundaria.bmp" />
-    <Content Include="Resources\VentanaTieneBotons.bmp" />
-    <Content Include="Resources\VentanaTieneMenus.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
@@ -254,12 +249,8 @@
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="Resources\Boton.bmp" />
-    <Content Include="Resources\EstadoFinal.bmp" />
-    <Content Include="Resources\IrVentana.bmp" />
-    <Content Include="Resources\ItemMenu.bmp" />
-    <Content Include="Resources\Menu.bmp" />
-    <Content Include="Resources\VentanaPrincipal.bmp" />
+    <Content Include="Resources\ExampleConnectorToolBitmap.bmp" />
+    <Content Include="Resources\ExampleShapeToolBitmap.bmp" />
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
     <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
   </ItemGroup>

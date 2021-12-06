@@ -778,14 +778,6 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaBoton/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Menu/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaMenu" />
       </ShapeMap>
       <ShapeMap>
@@ -795,14 +787,6 @@
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="MetaforaItemMenu/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ItemMenu/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaBoton/nombreDec" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ItemMenu/nombre" />
@@ -858,45 +842,45 @@
       <XmlSerializationBehaviorMoniker Name="GVSJGGGASLProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Elementos">
-      <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\VentanaPrincipal.bmp" Caption="VentanaPrincipalTool" Tooltip="Ventana Principal Tool" HelpKeyword="VentanaPrincipalTool">
+      <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaPrincipalTool" Tooltip="Ventana Principal Tool" HelpKeyword="VentanaPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VentanaSecundariaTool" ToolboxIcon="Resources\VentanaSecundaria.bmp" Caption="VentanaSecundariaTool" Tooltip="Ventana Secundaria Tool" HelpKeyword="VentanaSecundariaTool">
+      <ElementTool Name="VentanaSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VentanaSecundariaTool" Tooltip="Ventana Secundaria Tool" HelpKeyword="VentanaSecundariaTool">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
-      <ElementTool Name="BotonTool" ToolboxIcon="Resources\Boton.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+      <ElementTool Name="BotonTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
-      <ElementTool Name="MenuTool" ToolboxIcon="Resources\Menu.bmp" Caption="MenuTool" Tooltip="Menu Tool" HelpKeyword="MenuTool">
+      <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="MenuTool" Tooltip="Menu Tool" HelpKeyword="MenuTool">
         <DomainClassMoniker Name="Menu" />
       </ElementTool>
-      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ItemMenu.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
         <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
-      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\EstadoFinal.bmp" Caption="EstadoFinTool" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
+      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="EstadoFinTool" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
         <DomainClassMoniker Name="EstadoFin" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Conectores">
-      <ConnectionTool Name="VentanaTieneBotonsTool" ToolboxIcon="Resources\VentanaTieneBotons.bmp" Caption="VentanaTieneBotonsTool" Tooltip="Ventana Tiene Botons Tool" HelpKeyword="VentanaTieneBotonsTool">
+      <ConnectionTool Name="VentanaTieneBotonsTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="VentanaTieneBotonsTool" Tooltip="Ventana Tiene Botons Tool" HelpKeyword="VentanaTieneBotonsTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaTieneBotonsBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="VentanaTieneMenusTool" ToolboxIcon="Resources\VentanaTieneMenus.bmp" Caption="VentanaTieneMenusTool" Tooltip="Ventana Tiene Menus Tool" HelpKeyword="VentanaTieneMenusTool">
+      <ConnectionTool Name="VentanaTieneMenusTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="VentanaTieneMenusTool" Tooltip="Ventana Tiene Menus Tool" HelpKeyword="VentanaTieneMenusTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/VentanaTieneMenusBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="Boton_FinTool" ToolboxIcon="Resources\IrFin.bmp" Caption="Boton_FinTool" Tooltip="Boton_ Fin Tool" HelpKeyword="Boton_FinTool">
+      <ConnectionTool Name="Boton_FinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Boton_FinTool" Tooltip="Boton_ Fin Tool" HelpKeyword="Boton_FinTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/Boton_FinBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="Boton_VentanaTool" ToolboxIcon="Resources\IrVentana.bmp" Caption="Boton_VentanaTool" Tooltip="Boton_ Ventana Tool" HelpKeyword="Boton_VentanaTool">
+      <ConnectionTool Name="Boton_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Boton_VentanaTool" Tooltip="Boton_ Ventana Tool" HelpKeyword="Boton_VentanaTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/Boton_VentanaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="MenuTieneItemsMenuTool" ToolboxIcon="Resources\MenuTieneItemsMenu.bmp" Caption="MenuTieneItemsMenuTool" Tooltip="Menu Tiene Items Menu Tool" HelpKeyword="MenuTieneItemsMenuTool">
+      <ConnectionTool Name="MenuTieneItemsMenuTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="MenuTieneItemsMenuTool" Tooltip="Menu Tiene Items Menu Tool" HelpKeyword="MenuTieneItemsMenuTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/MenuTieneItemsMenuBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="ItemMenu_EstadoFinTool" ToolboxIcon="Resources\IrFin.bmp" Caption="ItemMenu_EstadoFinTool" Tooltip="Item Menu_ Estado Fin Tool" HelpKeyword="ItemMenu_EstadoFinTool">
+      <ConnectionTool Name="ItemMenu_EstadoFinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemMenu_EstadoFinTool" Tooltip="Item Menu_ Estado Fin Tool" HelpKeyword="ItemMenu_EstadoFinTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/ItemMenu_EstadoFinBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="ItemMenu_VentanaTool" ToolboxIcon="Resources\IrVentana.bmp" Caption="ItemMenu_VentanaTool" Tooltip="Item Menu_ Ventana Tool" HelpKeyword="ItemMenu_VentanaTool">
+      <ConnectionTool Name="ItemMenu_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemMenu_VentanaTool" Tooltip="Item Menu_ Ventana Tool" HelpKeyword="ItemMenu_VentanaTool">
         <ConnectionBuilderMoniker Name="GVSJGGGASLProyectoIPS/ItemMenu_VentanaBuilder" />
       </ConnectionTool>
     </ToolboxTab>
